@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Imóvel</title>
+    <link rel="stylesheet" href="./styles/style_pop.css">
+  </head>
+  <body>
+    <div class="popup-container">
+      <div class="popup-header">
+        <h1 id="popup-titulo">Título do Imóvel</h1>
+      </div>
+      <div class="popup-content">
+        <img
+          id="popup-imagem"
+          src=""
+          alt="Imagem do Imóvel"
+          class="popup-image"
+        />
+        <div class="popup-details" id="popup-descricao">
+          Descrição do imóvel
+        </div>
+        <div class="popup-price" id="popup-preco">Preço</div>
+        <span class="popup-type" id="popup-tipo">Tipo</span>
+      </div>
+    </div>
+
+    <script>
+      // Função para capturar os parâmetros da URL
+      function getParametro(nome) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return decodeURIComponent(urlParams.get(nome));
+      }
+
+      // Preenche as informações do popup
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("popup-titulo").textContent =
+          getParametro("titulo");
+        document.getElementById("popup-imagem").src = getParametro("imagem");
+        document.getElementById("popup-descricao").textContent =
+          getParametro("descricao");
+        document.getElementById("popup-preco").textContent =
+          getParametro("preco");
+
+        const tipo = getParametro("tipo");
+        const tipoElement = document.getElementById("popup-tipo");
+        tipoElement.textContent =
+          tipo === "venda" ? "Para Venda" : "Para Aluguel";
+        tipoElement.classList.add(tipo);
+      });
+    </script>
+  </body>
+</html>

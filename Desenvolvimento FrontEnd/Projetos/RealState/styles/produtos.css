@@ -1,0 +1,181 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.168);
+}
+
+.layout-grid {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #333333;
+}
+
+.link:hover {
+  color: #AF0404;
+  text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.filtro {
+    margin-bottom: 20px;
+}
+
+.filtro h3 {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.filtro input[type="radio"] {
+    display: none; /* Esconde os radio buttons reais */
+}
+
+.filtro label {
+    background-color: #ddd;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.filtro input[type="radio"]:checked + label {
+    background-color: #AF0404;
+    color: white;
+}
+
+.lista-casas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.casa {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.casa img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.casa h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.casa p {
+    color: #555;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.casa .preco {
+    font-size: 1.2rem;
+    color: #AF0404;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+  
+  .footer-left p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  .footer-right {
+    display: flex;
+  }
+  
+  .footer-link{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-navbar{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+/* Filtro com CSS puro */
+#venda:not(:checked) ~ .lista-casas .casa[data-tipo="aluguel"],
+#aluguel:not(:checked) ~ .lista-casas .casa[data-tipo="venda"] {
+    display: none;
+}
+
+#todos:checked ~ .lista-casas .casa {
+    display: block;
+}

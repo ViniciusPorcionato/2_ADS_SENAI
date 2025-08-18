@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imóveis Disponíveis</title>
+    <link rel="stylesheet" href="./styles/produtos.css" />
+    <link rel="icon" href="./assets/images/home.svg" type="image/x-icon" />
+
+    <script>
+      // Função para abrir a POP de detalhes do imóvel
+      function abrirDetalhes(titulo, imagem, descricao, preco, tipo) {
+        const url = `pop_produtos.html?titulo=${encodeURIComponent(
+          titulo
+        )}&imagem=${encodeURIComponent(imagem)}&descricao=${encodeURIComponent(
+          descricao
+        )}&preco=${encodeURIComponent(preco)}&tipo=${encodeURIComponent(tipo)}`;
+        window.open(url, "_blank", "width=800,height=700");
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content-header layout-grid">
+        <img
+          class="logo"
+          src="./assets/images/diamond_24dp_AF0404_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+        />
+        <nav class="navbar">
+          <a class="link" href="./index.html">Home</a>
+          <a class="link" href="./produtos.html">Produtos</a>
+          <a class="link" href="./contato.html">Contato</a>
+          <a class="link" href="./encomendas.html">Encomendas</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="produtos">
+        <div class="filtro">
+          <h3>Filtrar por:</h3>
+          <input type="radio" id="todos" name="filtro" checked />
+          <label for="todos">Todos</label>
+          <input type="radio" id="venda" name="filtro" />
+          <label for="venda">Venda</label>
+          <input type="radio" id="aluguel" name="filtro" />
+          <label for="aluguel">Aluguel</label>
+        </div>
+
+        <div class="lista-casas">
+          <div
+            class="casa"
+            data-tipo="venda"
+            onclick="abrirDetalhes('Casa Moderna no Centro', 'https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg', '3 quartos, 2 banheiros, garagem', 'R$ 450.000', 'venda')"
+          >
+            <img
+              src="https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg"
+              alt="Casa Moderna no Centro"
+            />
+            <h2>Casa Moderna no Centro</h2>
+            <p>3 quartos, 2 banheiros, garagem</p>
+            <p class="preco">R$ 450.000</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="aluguel"
+            onclick="abrirDetalhes('Apartamento para Aluguel', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s', '2 quartos, 1 banheiro, vista para o mar', 'R$ 1.200/mês', 'aluguel')"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s"
+              alt="Apartamento para Aluguel"
+            />
+            <h2>Apartamento para Aluguel</h2>
+            <p>2 quartos, 1 banheiro, vista para o mar</p>
+            <p class="preco">R$ 1.200/mês</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="venda"
+            onclick="abrirDetalhes('Casa Moderna no Centro', 'https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg', '3 quartos, 2 banheiros, garagem', 'R$ 450.000', 'venda')"
+          >
+            <img
+              src="https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg"
+              alt="Casa Moderna no Centro"
+            />
+            <h2>Casa Moderna no Centro</h2>
+            <p>3 quartos, 2 banheiros, garagem</p>
+            <p class="preco">R$ 450.000</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="aluguel"
+            onclick="abrirDetalhes('Apartamento para Aluguel', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s', '2 quartos, 1 banheiro, vista para o mar', 'R$ 1.200/mês', 'aluguel')"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s"
+              alt="Apartamento para Aluguel"
+            />
+            <h2>Apartamento para Aluguel</h2>
+            <p>2 quartos, 1 banheiro, vista para o mar</p>
+            <p class="preco">R$ 1.200/mês</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="venda"
+            onclick="abrirDetalhes('Casa Moderna no Centro', 'https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg', '3 quartos, 2 banheiros, garagem', 'R$ 450.000', 'venda')"
+          >
+            <img
+              src="https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg"
+              alt="Casa Moderna no Centro"
+            />
+            <h2>Casa Moderna no Centro</h2>
+            <p>3 quartos, 2 banheiros, garagem</p>
+            <p class="preco">R$ 450.000</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="aluguel"
+            onclick="abrirDetalhes('Apartamento para Aluguel', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s', '2 quartos, 1 banheiro, vista para o mar', 'R$ 1.200/mês', 'aluguel')"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s"
+              alt="Apartamento para Aluguel"
+            />
+            <h2>Apartamento para Aluguel</h2>
+            <p>2 quartos, 1 banheiro, vista para o mar</p>
+            <p class="preco">R$ 1.200/mês</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="venda"
+            onclick="abrirDetalhes('Casa Moderna no Centro', 'https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg', '3 quartos, 2 banheiros, garagem', 'R$ 450.000', 'venda')"
+          >
+            <img
+              src="https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg"
+              alt="Casa Moderna no Centro"
+            />
+            <h2>Casa Moderna no Centro</h2>
+            <p>3 quartos, 2 banheiros, garagem</p>
+            <p class="preco">R$ 450.000</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="aluguel"
+            onclick="abrirDetalhes('Apartamento para Aluguel', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s', '2 quartos, 1 banheiro, vista para o mar', 'R$ 1.200/mês', 'aluguel')"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s"
+              alt="Apartamento para Aluguel"
+            />
+            <h2>Apartamento para Aluguel</h2>
+            <p>2 quartos, 1 banheiro, vista para o mar</p>
+            <p class="preco">R$ 1.200/mês</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="venda"
+            onclick="abrirDetalhes('Casa Moderna no Centro', 'https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg', '3 quartos, 2 banheiros, garagem', 'R$ 450.000', 'venda')"
+          >
+            <img
+              src="https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg"
+              alt="Casa Moderna no Centro"
+            />
+            <h2>Casa Moderna no Centro</h2>
+            <p>3 quartos, 2 banheiros, garagem</p>
+            <p class="preco">R$ 450.000</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="aluguel"
+            onclick="abrirDetalhes('Apartamento para Aluguel', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s', '2 quartos, 1 banheiro, vista para o mar', 'R$ 1.200/mês', 'aluguel')"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s"
+              alt="Apartamento para Aluguel"
+            />
+            <h2>Apartamento para Aluguel</h2>
+            <p>2 quartos, 1 banheiro, vista para o mar</p>
+            <p class="preco">R$ 1.200/mês</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="venda"
+            onclick="abrirDetalhes('Casa Moderna no Centro', 'https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg', '3 quartos, 2 banheiros, garagem', 'R$ 450.000', 'venda')"
+          >
+            <img
+              src="https://plantasdecasas.com/wp-content/uploads/2017/07/planta-fachada-casa-115-fr-AG.jpg"
+              alt="Casa Moderna no Centro"
+            />
+            <h2>Casa Moderna no Centro</h2>
+            <p>3 quartos, 2 banheiros, garagem</p>
+            <p class="preco">R$ 450.000</p>
+          </div>
+
+          <div
+            class="casa"
+            data-tipo="aluguel"
+            onclick="abrirDetalhes('Apartamento para Aluguel', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s', '2 quartos, 1 banheiro, vista para o mar', 'R$ 1.200/mês', 'aluguel')"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3EkkbEdF4CsU_9ajQ4LzNYn2TSs1je7JEOA&s"
+              alt="Apartamento para Aluguel"
+            />
+            <h2>Apartamento para Aluguel</h2>
+            <p>2 quartos, 1 banheiro, vista para o mar</p>
+            <p class="preco">R$ 1.200/mês</p>
+          </div>
+          <!-- Adicione os outros imóveis seguindo o mesmo padrão -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img
+            class="footer-logo"
+            src="./assets/images/diamond_24dp_AF0404_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Logo"
+          />
+          <p>&copy; 2025 MyFirstProject. Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-right">
+          <nav class="footer-navbar">
+            <a href="" class="footer-link">Termos de Serviço</a>
+            <a href="" class="footer-link">Política de Privacidade</a>
+            <a href="" class="footer-link">Contato</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

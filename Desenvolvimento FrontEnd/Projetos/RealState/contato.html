@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Imobiliária</title>
+    <link rel="stylesheet" href="./styles/contato.css" />
+    <link rel="icon" href="./assets/images/home.svg" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <div class="content-header layout-grid">
+        <img
+          class="logo"
+          src="./assets/images/diamond_24dp_AF0404_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="Logo Imobiliária"
+        />
+        <nav class="navbar">
+          <a class="link" href="./index.html">Home</a>
+          <a class="link" href="./produtos.html">Produtos</a>
+          <a class="link" href="./contato.html">Contato</a>
+          <a class="link" href="./encomendas.html">Encomendas</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="contact-container">
+        <section class="contact-info">
+          <h2>Entre em Contato</h2>
+          <p>
+            Estamos à disposição para tirar suas dúvidas e ajudar a encontrar o
+            imóvel dos seus sonhos.
+          </p>
+
+          <div class="info-item">
+            <i>📞</i>
+            <span>(11) 9999-9999</span>
+          </div>
+
+          <div class="info-item">
+            <i>📱</i>
+            <span>(11) 98888-8888 (WhatsApp)</span>
+          </div>
+
+          <div class="info-item">
+            <i>✉️</i>
+            <span>contato@imobiliaria.com.br</span>
+          </div>
+
+          <div class="info-item">
+            <i>🏢</i>
+            <span>Rua Santo André, 123 - São caetano do Sul/SP</span>
+          </div>
+
+          <div class="info-item">
+            <i>⏰</i>
+            <span>Segunda a Sexta: 9h às 18h<br />Sábado: 9h às 13h</span>
+          </div>
+        </section>
+
+        <section class="contact-form">
+          <h2>Envie uma Mensagem</h2>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Nome completo*</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail*</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefone*</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Assunto*</label>
+              <select id="subject" name="subject" required>
+                <option value="">Selecione um assunto</option>
+                <option value="aluguel">Aluguel de Imóvel</option>
+                <option value="venda">Compra de Imóvel</option>
+                <option value="visita">Agendar Visita</option>
+                <option value="duvida">Dúvida</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem*</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-submit">
+                Enviar Mensagem
+              </button>
+              <button type="reset" class="btn btn-reset">Limpar Campos</button>
+            </div>
+          </form>
+
+          <div id="successMessage" class="success-message">
+            Mensagem enviada com sucesso! Entraremos em contato em breve.
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img
+            class="footer-logo"
+            src="./assets/images/diamond_24dp_AF0404_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Logo Imobiliária"
+          />
+          <p>&copy; 2025 Imobiliária. Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-right">
+          <nav class="footer-navbar">
+            <a href="" class="footer-link">Termos de Serviço</a>
+            <a href="" class="footer-link">Política de Privacidade</a>
+            <a href="./contato.html" class="footer-link">Contato</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Simulação de envio do formulário
+          setTimeout(function () {
+            // Mostra mensagem de sucesso
+            document.getElementById("successMessage").style.display = "block";
+
+            // Limpa o formulário
+            document.getElementById("contactForm").reset();
+
+            // Esconde a mensagem após 5 segundos
+            setTimeout(function () {
+              document.getElementById("successMessage").style.display = "none";
+            }, 5000);
+          }, 1000);
+        });
+    </script>
+  </body>
+</html>
