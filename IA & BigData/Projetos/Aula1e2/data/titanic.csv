@@ -1,0 +1,419 @@
+﻿PassengerId;Survived;Pclass;Name;Sex;Age;SibSp;Parch;Ticket;Fare;Cabin;Embarked
+892;Dead;Third Class;Kelly, Mr. James;male;345;0;0;330911;78292;;Q
+893;Alive;Third Class;Wilkes, Mrs. James (Ellen Needs);female;47;1;0;363272;7;;S
+894;Dead;Second Class;Myles, Mr. Thomas Francis;male;62;0;0;240276;96875;;Q
+895;Dead;Third Class;Wirz, Mr. Albert;male;27;0;0;315154;86625;;S
+896;Alive;Third Class;Hirvonen, Mrs. Alexander (Helga E Lindqvist);female;22;1;1;3101298;122875;;S
+897;Dead;Third Class;Svensson, Mr. Johan Cervin;male;14;0;0;7538;9225;;S
+898;Alive;Third Class;Connolly, Miss. Kate;female;30;0;0;330972;76292;;Q
+899;Dead;Second Class;Caldwell, Mr. Albert Francis;male;26;1;1;248738;29;;S
+900;Alive;Third Class;Abrahim, Mrs. Joseph (Sophie Halaut Easu);female;18;0;0;2657;72292;;C
+901;Dead;Third Class;Davies, Mr. John Samuel;male;21;2;0;A/4 48871;2415;;S
+902;Dead;Third Class;Ilieff, Mr. Ylio;male;;0;0;349220;78958;;S
+903;Dead;First Class;Jones, Mr. Charles Cresson;male;46;0;0;694;26;;S
+904;Alive;First Class;Snyder, Mrs. John Pillsbury (Nelle Stevenson);female;23;1;0;21228;822667;B45;S
+905;Dead;Second Class;Howard, Mr. Benjamin;male;63;1;0;24065;26;;S
+906;Alive;First Class;Chaffee, Mrs. Herbert Fuller (Carrie Constance Toogood);female;47;1;0;W.E.P. 5734;61175;E31;S
+907;Alive;Second Class;del Carlo, Mrs. Sebastiano (Argenia Genovesi);female;24;1;0;SC/PARIS 2167;277208;;C
+908;Dead;Second Class;Keane, Mr. Daniel;male;35;0;0;233734;1235;;Q
+909;Dead;Third Class;Assaf, Mr. Gerios;male;21;0;0;2692;7225;;C
+910;Alive;Third Class;Ilmakangas, Miss. Ida Livija;female;27;1;0;STON/O2. 3101270;7925;;S
+911;Alive;Third Class;"Assaf Khalil, Mrs. Mariana (Miriam"")""";female;45;0;0;2696;7225;;C
+912;Dead;First Class;Rothschild, Mr. Martin;male;55;1;0;PC 17603;594;;C
+913;Dead;Third Class;Olsen, Master. Artur Karl;male;9;0;1;C 17368;31708;;S
+914;Alive;First Class;Flegenheim, Mrs. Alfred (Antoinette);female;;0;0;PC 17598;316833;;S
+915;Dead;First Class;Williams, Mr. Richard Norris II;male;21;0;1;PC 17597;613792;;C
+916;Alive;First Class;Ryerson, Mrs. Arthur Larned (Emily Maria Borie);female;48;1;3;PC 17608;262375;B57 B59 B63 B66;C
+917;Dead;Third Class;Robins, Mr. Alexander A;male;50;1;0;A/5. 3337;145;;S
+918;Alive;First Class;Ostby, Miss. Helene Ragnhild;female;22;0;1;113509;619792;B36;C
+919;Dead;Third Class;Daher, Mr. Shedid;male;225;0;0;2698;7225;;C
+920;Dead;First Class;Brady, Mr. John Bertram;male;41;0;0;113054;305;A21;S
+921;Dead;Third Class;Samaan, Mr. Elias;male;;2;0;2662;216792;;C
+922;Dead;Second Class;Louch, Mr. Charles Alexander;male;50;1;0;SC/AH 3085;26;;S
+923;Dead;Second Class;Jefferys, Mr. Clifford Thomas;male;24;2;0;C.A. 31029;315;;S
+924;Alive;Third Class;Dean, Mrs. Bertram (Eva Georgetta Light);female;33;1;2;C.A. 2315;20575;;S
+925;Alive;Third Class;"Johnston, Mrs. Andrew G (Elizabeth Lily"" Watson)""";female;;1;2;W./C. 6607;2345;;S
+926;Dead;First Class;Mock, Mr. Philipp Edmund;male;30;1;0;13236;5775;C78;C
+927;Dead;Third Class;"Katavelas, Mr. Vassilios (Catavelas Vassilios"")""";male;185;0;0;2682;72292;;C
+928;Alive;Third Class;Roth, Miss. Sarah A;female;;0;0;342712;805;;S
+929;Alive;Third Class;Cacic, Miss. Manda;female;21;0;0;315087;86625;;S
+930;Dead;Third Class;Sap, Mr. Julius;male;25;0;0;345768;95;;S
+931;Dead;Third Class;Hee, Mr. Ling;male;;0;0;1601;564958;;S
+932;Dead;Third Class;Karun, Mr. Franz;male;39;0;1;349256;134167;;C
+933;Dead;First Class;Franklin, Mr. Thomas Parham;male;;0;0;113778;2655;D34;S
+934;Dead;Third Class;Goldsmith, Mr. Nathan;male;41;0;0;SOTON/O.Q. 3101263;785;;S
+935;Alive;Second Class;Corbett, Mrs. Walter H (Irene Colvin);female;30;0;0;237249;13;;S
+936;Alive;First Class;Kimball, Mrs. Edwin Nelson Jr (Gertrude Parsons);female;45;1;0;11753;525542;D19;S
+937;Dead;Third Class;Peltomaki, Mr. Nikolai Johannes;male;25;0;0;STON/O 2. 3101291;7925;;S
+938;Dead;First Class;Chevre, Mr. Paul Romaine;male;45;0;0;PC 17594;297;A9;C
+939;Dead;Third Class;Shaughnessy, Mr. Patrick;male;;0;0;370374;775;;Q
+940;Alive;First Class;Bucknell, Mrs. William Robert (Emma Eliza Ward);female;60;0;0;11813;762917;D15;C
+941;Alive;Third Class;"Coutts, Mrs. William (Winnie Minnie"" Treanor)""";female;36;0;2;C.A. 37671;159;;S
+942;Dead;First Class;Smith, Mr. Lucien Philip;male;24;1;0;13695;60;C31;S
+943;Dead;Second Class;Pulbaum, Mr. Franz;male;27;0;0;SC/PARIS 2168;150333;;C
+944;Alive;Second Class;"Hocking, Miss. Ellen Nellie""""";female;20;2;1;29105;23;;S
+945;Alive;First Class;Fortune, Miss. Ethel Flora;female;28;3;2;19950;263;C23 C25 C27;S
+946;Dead;Second Class;Mangiavacchi, Mr. Serafino Emilio;male;;0;0;SC/A.3 2861;155792;;C
+947;Dead;Third Class;Rice, Master. Albert;male;10;4;1;382652;29125;;Q
+948;Dead;Third Class;Cor, Mr. Bartol;male;35;0;0;349230;78958;;S
+949;Dead;Third Class;Abelseth, Mr. Olaus Jorgensen;male;25;0;0;348122;765;F G63;S
+950;Dead;Third Class;Davison, Mr. Thomas Henry;male;;1;0;386525;161;;S
+951;Alive;First Class;Chaudanson, Miss. Victorine;female;36;0;0;PC 17608;262375;B61;C
+952;Dead;Third Class;Dika, Mr. Mirko;male;17;0;0;349232;78958;;S
+953;Dead;Second Class;McCrae, Mr. Arthur Gordon;male;32;0;0;237216;135;;S
+954;Dead;Third Class;Bjorklund, Mr. Ernst Herbert;male;18;0;0;347090;775;;S
+955;Alive;Third Class;Bradley, Miss. Bridget Delia;female;22;0;0;334914;7725;;Q
+956;Dead;First Class;Ryerson, Master. John Borie;male;13;2;2;PC 17608;262375;B57 B59 B63 B66;C
+957;Alive;Second Class;Corey, Mrs. Percy C (Mary Phyllis Elizabeth Miller);female;;0;0;F.C.C. 13534;21;;S
+958;Alive;Third Class;Burns, Miss. Mary Delia;female;18;0;0;330963;78792;;Q
+959;Dead;First Class;Moore, Mr. Clarence Bloomfield;male;47;0;0;113796;424;;S
+960;Dead;First Class;Tucker, Mr. Gilbert Milligan Jr;male;31;0;0;2543;285375;C53;C
+961;Alive;First Class;Fortune, Mrs. Mark (Mary McDougald);female;60;1;4;19950;263;C23 C25 C27;S
+962;Alive;Third Class;Mulvihill, Miss. Bertha E;female;24;0;0;382653;775;;Q
+963;Dead;Third Class;Minkoff, Mr. Lazar;male;21;0;0;349211;78958;;S
+964;Alive;Third Class;Nieminen, Miss. Manta Josefina;female;29;0;0;3101297;7925;;S
+965;Dead;First Class;Ovies y Rodriguez, Mr. Servando;male;285;0;0;PC 17562;277208;D43;C
+966;Alive;First Class;Geiger, Miss. Amalie;female;35;0;0;113503;2115;C130;C
+967;Dead;First Class;Keeping, Mr. Edwin;male;325;0;0;113503;2115;C132;C
+968;Dead;Third Class;Miles, Mr. Frank;male;;0;0;359306;805;;S
+969;Alive;First Class;Cornell, Mrs. Robert Clifford (Malvina Helen Lamson);female;55;2;0;11770;257;C101;S
+970;Dead;Second Class;Aldworth, Mr. Charles Augustus;male;30;0;0;248744;13;;S
+971;Alive;Third Class;Doyle, Miss. Elizabeth;female;24;0;0;368702;775;;Q
+972;Dead;Third Class;Boulos, Master. Akar;male;6;1;1;2678;152458;;C
+973;Dead;First Class;Straus, Mr. Isidor;male;67;1;0;PC 17483;2217792;C55 C57;S
+974;Dead;First Class;Case, Mr. Howard Brown;male;49;0;0;19924;26;;S
+975;Dead;Third Class;Demetri, Mr. Marinko;male;;0;0;349238;78958;;S
+976;Dead;Second Class;Lamb, Mr. John Joseph;male;;0;0;240261;107083;;Q
+977;Dead;Third Class;Khalil, Mr. Betros;male;;1;0;2660;144542;;C
+978;Alive;Third Class;Barry, Miss. Julia;female;27;0;0;330844;78792;;Q
+979;Alive;Third Class;Badman, Miss. Emily Louisa;female;18;0;0;A/4 31416;805;;S
+980;Alive;Third Class;O'Donoghue, Ms. Bridget;female;;0;0;364856;775;;Q
+981;Dead;Second Class;Wells, Master. Ralph Lester;male;2;1;1;29103;23;;S
+982;Alive;Third Class;Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson);female;22;1;0;347072;139;;S
+983;Dead;Third Class;Pedersen, Mr. Olaf;male;;0;0;345498;7775;;S
+984;Alive;First Class;Davidson, Mrs. Thornton (Orian Hays);female;27;1;2;F.C. 12750;52;B71;S
+985;Dead;Third Class;Guest, Mr. Robert;male;;0;0;376563;805;;S
+986;Dead;First Class;Birnbaum, Mr. Jakob;male;25;0;0;13905;26;;C
+987;Dead;Third Class;Tenglin, Mr. Gunnar Isidor;male;25;0;0;350033;77958;;S
+988;Alive;First Class;Cavendish, Mrs. Tyrell William (Julia Florence Siegel);female;76;1;0;19877;7885;C46;S
+989;Dead;Third Class;Makinen, Mr. Kalle Edvard;male;29;0;0;STON/O 2. 3101268;7925;;S
+990;Alive;Third Class;Braf, Miss. Elin Ester Maria;female;20;0;0;347471;78542;;S
+991;Dead;Third Class;Nancarrow, Mr. William Henry;male;33;0;0;A./5. 3338;805;;S
+992;Alive;First Class;Stengel, Mrs. Charles Emil Henry (Annie May Morris);female;43;1;0;11778;554417;C116;C
+993;Dead;Second Class;Weisz, Mr. Leopold;male;27;1;0;228414;26;;S
+994;Dead;Third Class;Foley, Mr. William;male;;0;0;365235;775;;Q
+995;Dead;Third Class;Johansson Palmquist, Mr. Oskar Leander;male;26;0;0;347070;7775;;S
+996;Alive;Third Class;"Thomas, Mrs. Alexander (Thamine Thelma"")""";female;16;1;1;2625;85167;;C
+997;Dead;Third Class;Holthen, Mr. Johan Martin;male;28;0;0;C 4001;22525;;S
+998;Dead;Third Class;Buckley, Mr. Daniel;male;21;0;0;330920;78208;;Q
+999;Dead;Third Class;Ryan, Mr. Edward;male;;0;0;383162;775;;Q
+1000;Dead;Third Class;"Willer, Mr. Aaron (Abi Weller"")""";male;;0;0;3410;87125;;S
+1001;Dead;Second Class;Swane, Mr. George;male;185;0;0;248734;13;F;S
+1002;Dead;Second Class;Stanton, Mr. Samuel Ward;male;41;0;0;237734;150458;;C
+1003;Alive;Third Class;Shine, Miss. Ellen Natalia;female;;0;0;330968;77792;;Q
+1004;Alive;First Class;Evans, Miss. Edith Corse;female;36;0;0;PC 17531;316792;A29;C
+1005;Alive;Third Class;Buckley, Miss. Katherine;female;185;0;0;329944;72833;;Q
+1006;Alive;First Class;Straus, Mrs. Isidor (Rosalie Ida Blun);female;63;1;0;PC 17483;2217792;C55 C57;S
+1007;Dead;Third Class;Chronopoulos, Mr. Demetrios;male;18;1;0;2680;144542;;C
+1008;Dead;Third Class;Thomas, Mr. John;male;;0;0;2681;64375;;C
+1009;Alive;Third Class;Sandstrom, Miss. Beatrice Irene;female;1;1;1;PP 9549;167;G6;S
+1010;Dead;First Class;Beattie, Mr. Thomson;male;36;0;0;13050;752417;C6;C
+1011;Alive;Second Class;Chapman, Mrs. John Henry (Sara Elizabeth Lawry);female;29;1;0;SC/AH 29037;26;;S
+1012;Alive;Second Class;Watt, Miss. Bertha J;female;12;0;0;C.A. 33595;1575;;S
+1013;Dead;Third Class;Kiernan, Mr. John;male;;1;0;367227;775;;Q
+1014;Alive;First Class;Schabert, Mrs. Paul (Emma Mock);female;35;1;0;13236;5775;C28;C
+1015;Dead;Third Class;Carver, Mr. Alfred John;male;28;0;0;392095;725;;S
+1016;Dead;Third Class;Kennedy, Mr. John;male;;0;0;368783;775;;Q
+1017;Alive;Third Class;Cribb, Miss. Laura Alice;female;17;0;1;371362;161;;S
+1018;Dead;Third Class;Brobeck, Mr. Karl Rudolf;male;22;0;0;350045;77958;;S
+1019;Alive;Third Class;McCoy, Miss. Alicia;female;;2;0;367226;2325;;Q
+1020;Dead;Second Class;Bowenur, Mr. Solomon;male;42;0;0;211535;13;;S
+1021;Dead;Third Class;Petersen, Mr. Marius;male;24;0;0;342441;805;;S
+1022;Dead;Third Class;Spinner, Mr. Henry John;male;32;0;0;STON/OQ. 369943;805;;S
+1023;Dead;First Class;Gracie, Col. Archibald IV;male;53;0;0;113780;285;C51;C
+1024;Alive;Third Class;Lefebre, Mrs. Frank (Frances);female;;0;4;4133;254667;;S
+1025;Dead;Third Class;Thomas, Mr. Charles P;male;;1;0;2621;64375;;C
+1026;Dead;Third Class;Dintcheff, Mr. Valtcho;male;43;0;0;349226;78958;;S
+1027;Dead;Third Class;Carlsson, Mr. Carl Robert;male;24;0;0;350409;78542;;S
+1028;Dead;Third Class;Zakarian, Mr. Mapriededer;male;265;0;0;2656;7225;;C
+1029;Dead;Second Class;Schmidt, Mr. August;male;26;0;0;248659;13;;S
+1030;Alive;Third Class;Drapkin, Miss. Jennie;female;23;0;0;SOTON/OQ 392083;805;;S
+1031;Dead;Third Class;Goodwin, Mr. Charles Frederick;male;40;1;6;CA 2144;469;;S
+1032;Alive;Third Class;Goodwin, Miss. Jessie Allis;female;10;5;2;CA 2144;469;;S
+1033;Alive;First Class;Daniels, Miss. Sarah;female;33;0;0;113781;15155;;S
+1034;Dead;First Class;Ryerson, Mr. Arthur Larned;male;61;1;3;PC 17608;262375;B57 B59 B63 B66;C
+1035;Dead;Second Class;Beauchamp, Mr. Henry James;male;28;0;0;244358;26;;S
+1036;Dead;First Class;"Lindeberg-Lind, Mr. Erik Gustaf (Mr Edward Lingrey"")""";male;42;0;0;17475;2655;;S
+1037;Dead;Third Class;Vander Planke, Mr. Julius;male;31;3;0;345763;18;;S
+1038;Dead;First Class;Hilliard, Mr. Herbert Henry;male;;0;0;17463;518625;E46;S
+1039;Dead;Third Class;Davies, Mr. Evan;male;22;0;0;SC/A4 23568;805;;S
+1040;Dead;First Class;Crafton, Mr. John Bertram;male;;0;0;113791;2655;;S
+1041;Dead;Second Class;Lahtinen, Rev. William;male;30;1;1;250651;26;;S
+1042;Alive;First Class;Earnshaw, Mrs. Boulton (Olive Potter);female;23;0;1;11767;831583;C54;C
+1043;Dead;Third Class;Matinoff, Mr. Nicola;male;;0;0;349255;78958;;C
+1044;Dead;Third Class;Storey, Mr. Thomas;male;605;0;0;3701;;;S
+1045;Alive;Third Class;Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist);female;36;0;2;350405;121833;;S
+1046;Dead;Third Class;Asplund, Master. Filip Oscar;male;13;4;2;347077;313875;;S
+1047;Dead;Third Class;Duquemin, Mr. Joseph;male;24;0;0;S.O./P.P. 752;755;;S
+1048;Alive;First Class;Bird, Miss. Ellen;female;29;0;0;PC 17483;2217792;C97;S
+1049;Alive;Third Class;Lundin, Miss. Olga Elida;female;23;0;0;347469;78542;;S
+1050;Dead;First Class;Borebank, Mr. John James;male;42;0;0;110489;2655;D22;S
+1051;Alive;Third Class;Peacock, Mrs. Benjamin (Edith Nile);female;26;0;2;SOTON/O.Q. 3101315;13775;;S
+1052;Alive;Third Class;Smyth, Miss. Julia;female;;0;0;335432;77333;;Q
+1053;Dead;Third Class;Touma, Master. Georges Youssef;male;7;1;1;2650;152458;;C
+1054;Alive;Second Class;Wright, Miss. Marion;female;26;0;0;220844;135;;S
+1055;Dead;Third Class;Pearce, Mr. Ernest;male;;0;0;343271;7;;S
+1056;Dead;Second Class;Peruschitz, Rev. Joseph Maria;male;41;0;0;237393;13;;S
+1057;Alive;Third Class;Kink-Heilmann, Mrs. Anton (Luise Heilmann);female;26;1;1;315153;22025;;S
+1058;Dead;First Class;Brandeis, Mr. Emil;male;48;0;0;PC 17591;504958;B10;C
+1059;Dead;Third Class;Ford, Mr. Edward Watson;male;18;2;2;W./C. 6608;34375;;S
+1060;Alive;First Class;Cassebeer, Mrs. Henry Arthur Jr (Eleanor Genevieve Fosdick);female;;0;0;17770;277208;;C
+1061;Alive;Third Class;Hellstrom, Miss. Hilda Maria;female;22;0;0;7548;89625;;S
+1062;Dead;Third Class;Lithman, Mr. Simon;male;;0;0;S.O./P.P. 251;755;;S
+1063;Dead;Third Class;Zakarian, Mr. Ortin;male;27;0;0;2670;7225;;C
+1064;Dead;Third Class;Dyker, Mr. Adolf Fredrik;male;23;1;0;347072;139;;S
+1065;Dead;Third Class;Torfa, Mr. Assad;male;;0;0;2673;72292;;C
+1066;Dead;Third Class;Asplund, Mr. Carl Oscar Vilhelm Gustafsson;male;40;1;5;347077;313875;;S
+1067;Alive;Second Class;Brown, Miss. Edith Eileen;female;15;0;2;29750;39;;S
+1068;Alive;Second Class;Sincock, Miss. Maude;female;20;0;0;C.A. 33112;3675;;S
+1069;Dead;First Class;Stengel, Mr. Charles Emil Henry;male;54;1;0;11778;554417;C116;C
+1070;Alive;Second Class;Becker, Mrs. Allen Oliver (Nellie E Baumgardner);female;36;0;3;230136;39;F4;S
+1071;Alive;First Class;Compton, Mrs. Alexander Taylor (Mary Eliza Ingersoll);female;64;0;2;PC 17756;831583;E45;C
+1072;Dead;Second Class;McCrie, Mr. James Matthew;male;30;0;0;233478;13;;S
+1073;Dead;First Class;Compton, Mr. Alexander Taylor Jr;male;37;1;1;PC 17756;831583;E52;C
+1074;Alive;First Class;Marvin, Mrs. Daniel Warner (Mary Graham Carmichael Farquarson);female;18;1;0;113773;531;D30;S
+1075;Dead;Third Class;Lane, Mr. Patrick;male;;0;0;7935;775;;Q
+1076;Alive;First Class;Douglas, Mrs. Frederick Charles (Mary Helene Baxter);female;27;1;1;PC 17558;2475208;B58 B60;C
+1077;Dead;Second Class;Maybery, Mr. Frank Hubert;male;40;0;0;239059;16;;S
+1078;Alive;Second Class;Phillips, Miss. Alice Frances Louisa;female;21;0;1;S.O./P.P. 2;21;;S
+1079;Dead;Third Class;Davies, Mr. Joseph;male;17;2;0;A/4 48873;805;;S
+1080;Alive;Third Class;Sage, Miss. Ada;female;;8;2;CA. 2343;6955;;S
+1081;Dead;Second Class;Veal, Mr. James;male;40;0;0;28221;13;;S
+1082;Dead;Second Class;Angle, Mr. William A;male;34;1;0;226875;26;;S
+1083;Dead;First Class;Salomon, Mr. Abraham L;male;;0;0;111163;26;;S
+1084;Dead;Third Class;van Billiard, Master. Walter John;male;115;1;1;A/5. 851;145;;S
+1085;Dead;Second Class;Lingane, Mr. John;male;61;0;0;235509;1235;;Q
+1086;Dead;Second Class;Drew, Master. Marshall Brines;male;8;0;2;28220;325;;S
+1087;Dead;Third Class;Karlsson, Mr. Julius Konrad Eugen;male;33;0;0;347465;78542;;S
+1088;Dead;First Class;Spedden, Master. Robert Douglas;male;6;0;2;16966;1345;E34;C
+1089;Alive;Third Class;Nilsson, Miss. Berta Olivia;female;18;0;0;347066;7775;;S
+1090;Dead;Second Class;Baimbrigge, Mr. Charles Robert;male;23;0;0;C.A. 31030;105;;S
+1091;Alive;Third Class;Rasmussen, Mrs. (Lena Jacobsen Solvang);female;;0;0;65305;81125;;S
+1092;Alive;Third Class;Murphy, Miss. Nora;female;;0;0;36568;155;;Q
+1093;Dead;Third Class;Danbom, Master. Gilbert Sigvard Emanuel;male;33;0;2;347080;144;;S
+1094;Dead;First Class;Astor, Col. John Jacob;male;47;1;0;PC 17757;227525;C62 C64;C
+1095;Alive;Second Class;Quick, Miss. Winifred Vera;female;8;1;1;26360;26;;S
+1096;Dead;Second Class;Andrew, Mr. Frank Thomas;male;25;0;0;C.A. 34050;105;;S
+1097;Dead;First Class;Omont, Mr. Alfred Fernand;male;;0;0;F.C. 12998;257417;;C
+1098;Alive;Third Class;McGowan, Miss. Katherine;female;35;0;0;9232;775;;Q
+1099;Dead;Second Class;Collett, Mr. Sidney C Stuart;male;24;0;0;28034;105;;S
+1100;Alive;First Class;Rosenbaum, Miss. Edith Louise;female;33;0;0;PC 17613;277208;A11;C
+1101;Dead;Third Class;Delalic, Mr. Redjo;male;25;0;0;349250;78958;;S
+1102;Dead;Third Class;Andersen, Mr. Albert Karvin;male;32;0;0;C 4001;22525;;S
+1103;Dead;Third Class;Finoli, Mr. Luigi;male;;0;0;SOTON/O.Q. 3101308;705;;S
+1104;Dead;Second Class;Deacon, Mr. Percy William;male;17;0;0;S.O.C. 14879;735;;S
+1105;Alive;Second Class;Howard, Mrs. Benjamin (Ellen Truelove Arman);female;60;1;0;24065;26;;S
+1106;Alive;Third Class;Andersson, Miss. Ida Augusta Margareta;female;38;4;2;347091;7775;;S
+1107;Dead;First Class;Head, Mr. Christopher;male;42;0;0;113038;425;B11;S
+1108;Alive;Third Class;Mahon, Miss. Bridget Delia;female;;0;0;330924;78792;;Q
+1109;Dead;First Class;Wick, Mr. George Dennick;male;57;1;1;36928;1648667;;S
+1110;Alive;First Class;Widener, Mrs. George Dunton (Eleanor Elkins);female;50;1;1;113503;2115;C80;C
+1111;Dead;Third Class;Thomson, Mr. Alexander Morrison;male;;0;0;32302;805;;S
+1112;Alive;Second Class;Duran y More, Miss. Florentina;female;30;1;0;SC/PARIS 2148;138583;;C
+1113;Dead;Third Class;Reynolds, Mr. Harold J;male;21;0;0;342684;805;;S
+1114;Alive;Second Class;Cook, Mrs. (Selena Rogers);female;22;0;0;W./C. 14266;105;F33;S
+1115;Dead;Third Class;Karlsson, Mr. Einar Gervasius;male;21;0;0;350053;77958;;S
+1116;Alive;First Class;Candee, Mrs. Edward (Helen Churchill Hungerford);female;53;0;0;PC 17606;274458;;C
+1117;Alive;Third Class;"Moubarek, Mrs. George (Omine Amenia"" Alexander)""";female;;0;2;2661;152458;;C
+1118;Dead;Third Class;Asplund, Mr. Johan Charles;male;23;0;0;350054;77958;;S
+1119;Alive;Third Class;McNeill, Miss. Bridget;female;;0;0;370368;775;;Q
+1120;Dead;Third Class;Everett, Mr. Thomas James;male;405;0;0;C.A. 6212;151;;S
+1121;Dead;Second Class;Hocking, Mr. Samuel James Metcalfe;male;36;0;0;242963;13;;S
+1122;Dead;Second Class;Sweet, Mr. George Frederick;male;14;0;0;220845;65;;S
+1123;Alive;First Class;Willard, Miss. Constance;female;21;0;0;113795;2655;;S
+1124;Dead;Third Class;Wiklund, Mr. Karl Johan;male;21;1;0;3101266;64958;;S
+1125;Dead;Third Class;Linehan, Mr. Michael;male;;0;0;330971;78792;;Q
+1126;Dead;First Class;Cumings, Mr. John Bradley;male;39;1;0;PC 17599;712833;C85;C
+1127;Dead;Third Class;Vendel, Mr. Olof Edvin;male;20;0;0;350416;78542;;S
+1128;Dead;First Class;Warren, Mr. Frank Manley;male;64;1;0;110813;7525;D37;C
+1129;Dead;Third Class;Baccos, Mr. Raffull;male;20;0;0;2679;7225;;C
+1130;Alive;Second Class;Hiltunen, Miss. Marta;female;18;1;1;250650;13;;S
+1131;Alive;First Class;Douglas, Mrs. Walter Donald (Mahala Dutton);female;48;1;0;PC 17761;106425;C86;C
+1132;Alive;First Class;Lindstrom, Mrs. Carl Johan (Sigrid Posse);female;55;0;0;112377;277208;;C
+1133;Alive;Second Class;Christy, Mrs. (Alice Frances);female;45;0;2;237789;30;;S
+1134;Dead;First Class;Spedden, Mr. Frederic Oakley;male;45;1;1;16966;1345;E34;C
+1135;Dead;Third Class;Hyman, Mr. Abraham;male;;0;0;3470;78875;;S
+1136;Dead;Third Class;"Johnston, Master. William Arthur Willie""""";male;;1;2;W./C. 6607;2345;;S
+1137;Dead;First Class;Kenyon, Mr. Frederick R;male;41;1;0;17464;518625;D21;S
+1138;Alive;Second Class;Karnes, Mrs. J Frank (Claire Bennett);female;22;0;0;F.C.C. 13534;21;;S
+1139;Dead;Second Class;Drew, Mr. James Vivian;male;42;1;1;28220;325;;S
+1140;Alive;Second Class;Hold, Mrs. Stephen (Annie Margaret Hill);female;29;1;0;26707;26;;S
+1141;Alive;Third Class;"Khalil, Mrs. Betros (Zahie Maria"" Elias)""";female;;1;0;2660;144542;;C
+1142;Alive;Second Class;West, Miss. Barbara J;female;92;1;2;C.A. 34651;2775;;S
+1143;Dead;Third Class;Abrahamsson, Mr. Abraham August Johannes;male;20;0;0;SOTON/O2 3101284;7925;;S
+1144;Dead;First Class;Clark, Mr. Walter Miller;male;27;1;0;13508;1367792;C89;C
+1145;Dead;Third Class;Salander, Mr. Karl Johan;male;24;0;0;7266;9325;;S
+1146;Dead;Third Class;Wenzel, Mr. Linhart;male;325;0;0;345775;95;;S
+1147;Dead;Third Class;MacKay, Mr. George William;male;;0;0;C.A. 42795;755;;S
+1148;Dead;Third Class;Mahon, Mr. John;male;;0;0;AQ/4 3130;775;;Q
+1149;Dead;Third Class;Niklasson, Mr. Samuel;male;28;0;0;363611;805;;S
+1150;Alive;Second Class;Bentham, Miss. Lilian W;female;19;0;0;28404;13;;S
+1151;Dead;Third Class;Midtsjo, Mr. Karl Albert;male;21;0;0;345501;7775;;S
+1152;Dead;Third Class;de Messemaeker, Mr. Guillaume Joseph;male;365;1;0;345572;174;;S
+1153;Dead;Third Class;Nilsson, Mr. August Ferdinand;male;21;0;0;350410;78542;;S
+1154;Alive;Second Class;"Wells, Mrs. Arthur Henry (Addie"" Dart Trevaskis)""";female;29;0;2;29103;23;;S
+1155;Alive;Third Class;Klasen, Miss. Gertrud Emilia;female;1;1;1;350405;121833;;S
+1156;Dead;Second Class;Portaluppi, Mr. Emilio Ilario Giuseppe;male;30;0;0;C.A. 34644;127375;;C
+1157;Dead;Third Class;Lyntakoff, Mr. Stanko;male;;0;0;349235;78958;;S
+1158;Dead;First Class;Chisholm, Mr. Roderick Robert Crispin;male;;0;0;112051;0;;S
+1159;Dead;Third Class;Warren, Mr. Charles William;male;;0;0;C.A. 49867;755;;S
+1160;Alive;Third Class;Howard, Miss. May Elizabeth;female;;0;0;A. 2. 39186;805;;S
+1161;Dead;Third Class;Pokrnic, Mr. Mate;male;17;0;0;315095;86625;;S
+1162;Dead;First Class;McCaffry, Mr. Thomas Francis;male;46;0;0;13050;752417;C6;C
+1163;Dead;Third Class;Fox, Mr. Patrick;male;;0;0;368573;775;;Q
+1164;Alive;First Class;Clark, Mrs. Walter Miller (Virginia McDowell);female;26;1;0;13508;1367792;C89;C
+1165;Alive;Third Class;Lennon, Miss. Mary;female;;1;0;370371;155;;Q
+1166;Dead;Third Class;Saade, Mr. Jean Nassr;male;;0;0;2676;7225;;C
+1167;Alive;Second Class;Bryhl, Miss. Dagmar Jenny Ingeborg ;female;20;1;0;236853;26;;S
+1168;Dead;Second Class;Parker, Mr. Clifford Richard;male;28;0;0;SC 14888;105;;S
+1169;Dead;Second Class;Faunthorpe, Mr. Harry;male;40;1;0;2926;26;;S
+1170;Dead;Second Class;Ware, Mr. John James;male;30;1;0;CA 31352;21;;S
+1171;Dead;Second Class;Oxenham, Mr. Percy Thomas;male;22;0;0;W./C. 14260;105;;S
+1172;Alive;Third Class;Oreskovic, Miss. Jelka;female;23;0;0;315085;86625;;S
+1173;Dead;Third Class;Peacock, Master. Alfred Edward;male;75;1;1;SOTON/O.Q. 3101315;13775;;S
+1174;Alive;Third Class;Fleming, Miss. Honora;female;;0;0;364859;775;;Q
+1175;Alive;Third Class;Touma, Miss. Maria Youssef;female;9;1;1;2650;152458;;C
+1176;Alive;Third Class;Rosblom, Miss. Salli Helena;female;2;1;1;370129;202125;;S
+1177;Dead;Third Class;Dennis, Mr. William;male;36;0;0;A/5 21175;725;;S
+1178;Dead;Third Class;Franklin, Mr. Charles (Charles Fardon);male;;0;0;SOTON/O.Q. 3101314;725;;S
+1179;Dead;First Class;Snyder, Mr. John Pillsbury;male;24;1;0;21228;822667;B45;S
+1180;Dead;Third Class;Mardirosian, Mr. Sarkis;male;;0;0;2655;72292;F E46;C
+1181;Dead;Third Class;Ford, Mr. Arthur;male;;0;0;A/5 1478;805;;S
+1182;Dead;First Class;Rheims, Mr. George Alexander Lucien;male;;0;0;PC 17607;396;;S
+1183;Alive;Third Class;"Daly, Miss. Margaret Marcella Maggie""""";female;30;0;0;382650;695;;Q
+1184;Dead;Third Class;Nasr, Mr. Mustafa;male;;0;0;2652;72292;;C
+1185;Dead;First Class;Dodge, Dr. Washington;male;53;1;1;33638;818583;A34;S
+1186;Dead;Third Class;Wittevrongel, Mr. Camille;male;36;0;0;345771;95;;S
+1187;Dead;Third Class;Angheloff, Mr. Minko;male;26;0;0;349202;78958;;S
+1188;Alive;Second Class;Laroche, Miss. Louise;female;1;1;2;SC/Paris 2123;415792;;C
+1189;Dead;Third Class;Samaan, Mr. Hanna;male;;2;0;2662;216792;;C
+1190;Dead;First Class;Loring, Mr. Joseph Holland;male;30;0;0;113801;455;;S
+1191;Dead;Third Class;Johansson, Mr. Nils;male;29;0;0;347467;78542;;S
+1192;Dead;Third Class;Olsson, Mr. Oscar Wilhelm;male;32;0;0;347079;7775;;S
+1193;Dead;Second Class;Malachard, Mr. Noel;male;;0;0;237735;150458;D;C
+1194;Dead;Second Class;Phillips, Mr. Escott Robert;male;43;0;1;S.O./P.P. 2;21;;S
+1195;Dead;Third Class;Pokrnic, Mr. Tome;male;24;0;0;315092;86625;;S
+1196;Alive;Third Class;"McCarthy, Miss. Catherine Katie""""";female;;0;0;383123;775;;Q
+1197;Alive;First Class;Crosby, Mrs. Edward Gifford (Catherine Elizabeth Halstead);female;64;1;1;112901;2655;B26;S
+1198;Dead;First Class;Allison, Mr. Hudson Joshua Creighton;male;30;1;2;113781;15155;C22 C26;S
+1199;Dead;Third Class;Aks, Master. Philip Frank;male;83;0;1;392091;935;;S
+1200;Dead;First Class;Hays, Mr. Charles Melville;male;55;1;1;12749;935;B69;S
+1201;Alive;Third Class;Hansen, Mrs. Claus Peter (Jennie L Howard);female;45;1;0;350026;141083;;S
+1202;Dead;Third Class;Cacic, Mr. Jego Grga;male;18;0;0;315091;86625;;S
+1203;Dead;Third Class;Vartanian, Mr. David;male;22;0;0;2658;7225;;C
+1204;Dead;Third Class;Sadowitz, Mr. Harry;male;;0;0;LP 1588;7575;;S
+1205;Alive;Third Class;Carr, Miss. Jeannie;female;37;0;0;368364;775;;Q
+1206;Alive;First Class;White, Mrs. John Stuart (Ella Holmes);female;55;0;0;PC 17760;1356333;C32;C
+1207;Alive;Third Class;Hagardon, Miss. Kate;female;17;0;0;AQ/3. 30631;77333;;Q
+1208;Dead;First Class;Spencer, Mr. William Augustus;male;57;1;0;PC 17569;1465208;B78;C
+1209;Dead;Second Class;Rogers, Mr. Reginald Harry;male;19;0;0;28004;105;;S
+1210;Dead;Third Class;Jonsson, Mr. Nils Hilding;male;27;0;0;350408;78542;;S
+1211;Dead;Second Class;Jefferys, Mr. Ernest Wilfred;male;22;2;0;C.A. 31029;315;;S
+1212;Dead;Third Class;Andersson, Mr. Johan Samuel;male;26;0;0;347075;7775;;S
+1213;Dead;Third Class;Krekorian, Mr. Neshan;male;25;0;0;2654;72292;F E57;C
+1214;Dead;Second Class;Nesson, Mr. Israel;male;26;0;0;244368;13;F2;S
+1215;Dead;First Class;Rowe, Mr. Alfred G;male;33;0;0;113790;2655;;S
+1216;Alive;First Class;Kreuchen, Miss. Emilie;female;39;0;0;24160;2113375;;S
+1217;Dead;Third Class;Assam, Mr. Ali;male;23;0;0;SOTON/O.Q. 3101309;705;;S
+1218;Alive;Second Class;Becker, Miss. Ruth Elizabeth;female;12;2;1;230136;39;F4;S
+1219;Dead;First Class;"Rosenshine, Mr. George (Mr George Thorne"")""";male;46;0;0;PC 17585;792;;C
+1220;Dead;Second Class;Clarke, Mr. Charles Valentine;male;29;1;0;2003;26;;S
+1221;Dead;Second Class;Enander, Mr. Ingvar;male;21;0;0;236854;13;;S
+1222;Alive;Second Class;Davies, Mrs. John Morgan (Elizabeth Agnes Mary White) ;female;48;0;2;C.A. 33112;3675;;S
+1223;Dead;First Class;Dulles, Mr. William Crothers;male;39;0;0;PC 17580;297;A18;C
+1224;Dead;Third Class;Thomas, Mr. Tannous;male;;0;0;2684;7225;;C
+1225;Alive;Third Class;"Nakid, Mrs. Said (Waika Mary"" Mowad)""";female;19;1;1;2653;157417;;C
+1226;Dead;Third Class;Cor, Mr. Ivan;male;27;0;0;349229;78958;;S
+1227;Dead;First Class;Maguire, Mr. John Edward;male;30;0;0;110469;26;C106;S
+1228;Dead;Second Class;de Brito, Mr. Jose Joaquim;male;32;0;0;244360;13;;S
+1229;Dead;Third Class;Elias, Mr. Joseph;male;39;0;2;2675;72292;;C
+1230;Dead;Second Class;Denbury, Mr. Herbert;male;25;0;0;C.A. 31029;315;;S
+1231;Dead;Third Class;Betros, Master. Seman;male;;0;0;2622;72292;;C
+1232;Dead;Second Class;Fillbrook, Mr. Joseph Charles;male;18;0;0;C.A. 15185;105;;S
+1233;Dead;Third Class;Lundstrom, Mr. Thure Edvin;male;32;0;0;350403;75792;;S
+1234;Dead;Third Class;Sage, Mr. John George;male;;1;9;CA. 2343;6955;;S
+1235;Alive;First Class;Cardeza, Mrs. James Warburton Martinez (Charlotte Wardle Drake);female;58;0;1;PC 17755;5123292;B51 B53 B55;C
+1236;Dead;Third Class;van Billiard, Master. James William;male;;1;1;A/5. 851;145;;S
+1237;Alive;Third Class;Abelseth, Miss. Karen Marie;female;16;0;0;348125;765;;S
+1238;Dead;Second Class;Botsford, Mr. William Hull;male;26;0;0;237670;13;;S
+1239;Alive;Third Class;Whabee, Mrs. George Joseph (Shawneene Abi-Saab);female;38;0;0;2688;72292;;C
+1240;Dead;Second Class;Giles, Mr. Ralph;male;24;0;0;248726;135;;S
+1241;Alive;Second Class;Walcroft, Miss. Nellie;female;31;0;0;F.C.C. 13528;21;;S
+1242;Alive;First Class;Greenfield, Mrs. Leo David (Blanche Strouse);female;45;0;1;PC 17759;633583;D10 D12;C
+1243;Dead;Second Class;Stokes, Mr. Philip Joseph;male;25;0;0;F.C.C. 13540;105;;S
+1244;Dead;Second Class;Dibden, Mr. William;male;18;0;0;S.O.C. 14879;735;;S
+1245;Dead;Second Class;Herman, Mr. Samuel;male;49;1;2;220845;65;;S
+1246;Alive;Third Class;"Dean, Miss. Elizabeth Gladys Millvina""""";female;17;1;2;C.A. 2315;20575;;S
+1247;Dead;First Class;Julian, Mr. Henry Forbes;male;50;0;0;113044;26;E60;S
+1248;Alive;First Class;Brown, Mrs. John Murray (Caroline Lane Lamson);female;59;2;0;11769;514792;C101;S
+1249;Dead;Third Class;Lockyer, Mr. Edward;male;;0;0;1222;78792;;S
+1250;Dead;Third Class;O'Keefe, Mr. Patrick;male;;0;0;368402;775;;Q
+1251;Alive;Third Class;Lindell, Mrs. Edvard Bengtsson (Elin Gerda Persson);female;30;1;0;349910;1555;;S
+1252;Dead;Third Class;Sage, Master. William Henry;male;145;8;2;CA. 2343;6955;;S
+1253;Alive;Second Class;Mallet, Mrs. Albert (Antoinette Magnin);female;24;1;1;S.C./PARIS 2079;370042;;C
+1254;Alive;Second Class;Ware, Mrs. John James (Florence Louise Long);female;31;0;0;CA 31352;21;;S
+1255;Dead;Third Class;Strilic, Mr. Ivan;male;27;0;0;315083;86625;;S
+1256;Alive;First Class;Harder, Mrs. George Achilles (Dorothy Annan);female;25;1;0;11765;554417;E50;C
+1257;Alive;Third Class;Sage, Mrs. John (Annie Bullen);female;;1;9;CA. 2343;6955;;S
+1258;Dead;Third Class;Caram, Mr. Joseph;male;;1;0;2689;144583;;C
+1259;Alive;Third Class;"Riihivouri, Miss. Susanna Juhantytar Sanni""""";female;22;0;0;3101295;396875;;S
+1260;Alive;First Class;Gibson, Mrs. Leonard (Pauline C Boeson);female;45;0;1;112378;594;;C
+1261;Dead;Second Class;Pallas y Castello, Mr. Emilio;male;29;0;0;SC/PARIS 2147;138583;;C
+1262;Dead;Second Class;Giles, Mr. Edgar;male;21;1;0;28133;115;;S
+1263;Alive;First Class;Wilson, Miss. Helen Alice;female;31;0;0;16966;1345;E39 E41;C
+1264;Dead;First Class;Ismay, Mr. Joseph Bruce;male;49;0;0;112058;0;B52 B54 B56;S
+1265;Dead;Second Class;Harbeck, Mr. William H;male;44;0;0;248746;13;;S
+1266;Alive;First Class;Dodge, Mrs. Washington (Ruth Vidaver);female;54;1;1;33638;818583;A34;S
+1267;Alive;First Class;Bowen, Miss. Grace Scott;female;45;0;0;PC 17608;262375;;C
+1268;Alive;Third Class;Kink, Miss. Maria;female;22;2;0;315152;86625;;S
+1269;Dead;Second Class;"Cotterill, Mr. Henry Harry""""";male;21;0;0;29107;115;;S
+1270;Dead;First Class;Hipkins, Mr. William Edward;male;55;0;0;680;50;C39;S
+1271;Dead;Third Class;Asplund, Master. Carl Edgar;male;5;4;2;347077;313875;;S
+1272;Dead;Third Class;O'Connor, Mr. Patrick;male;;0;0;366713;775;;Q
+1273;Dead;Third Class;Foley, Mr. Joseph;male;26;0;0;330910;78792;;Q
+1274;Alive;Third Class;Risien, Mrs. Samuel (Emma);female;;0;0;364498;145;;S
+1275;Alive;Third Class;McNamee, Mrs. Neal (Eileen O'Leary);female;19;1;0;376566;161;;S
+1276;Dead;Second Class;"Wheeler, Mr. Edwin Frederick""""";male;;0;0;SC/PARIS 2159;12875;;S
+1277;Alive;Second Class;Herman, Miss. Kate;female;24;1;2;220845;65;;S
+1278;Dead;Third Class;Aronsson, Mr. Ernst Axel Algot;male;24;0;0;349911;7775;;S
+1279;Dead;Second Class;Ashby, Mr. John;male;57;0;0;244346;13;;S
+1280;Dead;Third Class;Canavan, Mr. Patrick;male;21;0;0;364858;775;;Q
+1281;Dead;Third Class;Palsson, Master. Paul Folke;male;6;3;1;349909;21075;;S
+1282;Dead;First Class;Payne, Mr. Vivian Ponsonby;male;23;0;0;12749;935;B24;S
+1283;Alive;First Class;Lines, Mrs. Ernest H (Elizabeth Lindsey James);female;51;0;1;PC 17592;394;D28;S
+1284;Dead;Third Class;Abbott, Master. Eugene Joseph;male;13;0;2;C.A. 2673;2025;;S
+1285;Dead;Second Class;Gilbert, Mr. William;male;47;0;0;C.A. 30769;105;;S
+1286;Dead;Third Class;Kink-Heilmann, Mr. Anton;male;29;3;1;315153;22025;;S
+1287;Alive;First Class;Smith, Mrs. Lucien Philip (Mary Eloise Hughes);female;18;1;0;13695;60;C31;S
+1288;Dead;Third Class;Colbert, Mr. Patrick;male;24;0;0;371109;725;;Q
+1289;Alive;First Class;Frolicher-Stehli, Mrs. Maxmillian (Margaretha Emerentia Stehli);female;48;1;1;13567;792;B41;C
+1290;Dead;Third Class;Larsson-Rondberg, Mr. Edvard A;male;22;0;0;347065;7775;;S
+1291;Dead;Third Class;Conlon, Mr. Thomas Henry;male;31;0;0;21332;77333;;Q
+1292;Alive;First Class;Bonnell, Miss. Caroline;female;30;0;0;36928;1648667;C7;S
+1293;Dead;Second Class;Gale, Mr. Harry;male;38;1;0;28664;21;;S
+1294;Alive;First Class;Gibson, Miss. Dorothy Winifred;female;22;0;1;112378;594;;C
+1295;Dead;First Class;Carrau, Mr. Jose Pedro;male;17;0;0;113059;471;;S
+1296;Dead;First Class;Frauenthal, Mr. Isaac Gerald;male;43;1;0;17765;277208;D40;C
+1297;Dead;Second Class;"Nourney, Mr. Alfred (Baron von Drachstedt"")""";male;20;0;0;SC/PARIS 2166;138625;D38;C
+1298;Dead;Second Class;Ware, Mr. William Jeffery;male;23;1;0;28666;105;;S
+1299;Dead;First Class;Widener, Mr. George Dunton;male;50;1;1;113503;2115;C80;C
+1300;Alive;Third Class;"Riordan, Miss. Johanna Hannah""""";female;;0;0;334915;77208;;Q
+1301;Alive;Third Class;Peacock, Miss. Treasteall;female;3;1;1;SOTON/O.Q. 3101315;13775;;S
+1302;Alive;Third Class;Naughton, Miss. Hannah;female;;0;0;365237;775;;Q
+1303;Alive;First Class;Minahan, Mrs. William Edward (Lillian E Thorpe);female;37;1;0;19928;90;C78;Q
+1304;Alive;Third Class;Henriksson, Miss. Jenny Lovisa;female;28;0;0;347086;7775;;S
+1305;Dead;Third Class;Spector, Mr. Woolf;male;;0;0;A.5. 3236;805;;S
+1306;Alive;First Class;Oliva y Ocana, Dona. Fermina;female;39;0;0;PC 17758;1089;C105;C
+1307;Dead;Third Class;Saether, Mr. Simon Sivertsen;male;385;0;0;SOTON/O.Q. 3101262;725;;S
+1308;Dead;Third Class;Ware, Mr. Frederick;male;;0;0;359309;805;;S
+1309;Dead;Third Class;Peter, Master. Michael J;male;;1;1;2668;223583;;C

@@ -1,0 +1,36 @@
+Construit 1 Rede
+
+Ip da Rede 10.84.0.0/8
+
+1 = 31 computadores
+Será utilizado 64 Ips
+Máscara:
+Ip Broadcast:
+Ip de Rede:
+1º Ip Válido:
+Nº Ip Válido: 
+
+2 = 260 computadores 
+Será utilizado 512 Ips
+Máscara: 255.255.254.0 /23
+Ip Broadcast: 10.84.3.255
+Ip de Rede: 10.84.2.0
+1º Ip Válido: 10.84.2.1
+Nº Ip Válido: 10.84.3.254
+
+3 = 345 computadores
+Será utilizado 512 Ips
+Máscara: 255.255.254.0 /23
+Ip Broadcast: 10.84.1.255
+Ip de Rede: 10.84.0.0
+1º Ip Válido: 10.84.0.1
+Nº Ip Válido: 10.84.1.254
+
+4 = 50 computadores 
+Será utilizado 64 Ips
+Máscara: 255.255.255.
+Ip Broadcast:
+Ip de Rede:
+1º Ip Válido:
+Nº Ip Válido: 
+
