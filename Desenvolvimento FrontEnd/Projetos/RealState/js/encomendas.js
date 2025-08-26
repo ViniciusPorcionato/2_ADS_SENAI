@@ -11,12 +11,10 @@ clientes.forEach((cliente) => {
 
   if (qtde < 1 || isNaN(qtde)) {
     cliente.querySelector(".qtde").textContent = "Quantidade inválida";
-    cliente.querySelector(".qtde").style.color = "red";
-    cliente.style.backgroundColor = "white";
+    cliente.classList.add("info_invalida_2")
   } else if (unitario < 1 || isNaN(unitario)) {
     cliente.querySelector(".unitario").textContent = "Quantidade inválida";
-    cliente.querySelector(".unitario").style.color = "white";
-    cliente.style.backgroundColor = "red";
+    cliente.classList.add("info_invalida")
   } else {
     //Setar o valor da conta no campo total
     cliente.querySelector(".total").textContent = calcularTotal(qtde, unitario);

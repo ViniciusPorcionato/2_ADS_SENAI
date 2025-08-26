@@ -55,7 +55,7 @@
               <td class="nome">Cleber</td>
               <td class="servico">Consultoria Jurídica</td>
               <td class="qtde">1</td>
-              <td class="unitario">500</td>
+              <td class="unitario">01</td>
               <td class="total"></td>
             </tr>
             <tr class="cliente">
@@ -67,6 +67,59 @@
             </tr>
           </tbody>
         </table>
+
+        <form id="form-encomenda" class="form-encomenda">
+          <h2>Adicionar Encomenda</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nome do Cliente:</label>
+              <input type="text" id="nome-form" name="nome-form" required />
+            </div>
+
+            <div class="form-group">
+              <label>Quantidade:</label>
+              <input
+                type="number"
+                id="quantidade-form"
+                name="quantidade-form"
+                min="1"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Serviço:</label>
+              <select id="servico-form" name="servico-form" required>
+                <option value="">Selecione</option>
+                <option value="Visitas Agendadas">Visitas Agendadas</option>
+                <option value="Avaliação de Imóvel">Avaliação de Imóvel</option>
+                <option value="Consultoria Jurídica">
+                  Consultoria Jurídica
+                </option>
+                <option value="Anúncio Premium">Anúncio Premium</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Valor Unitário:</label>
+              <input
+                type="number"
+                id="valor-form"
+                name="valor-form"
+                min="0"
+                step="0.01"
+                required
+              />
+            </div>
+          </div>
+
+          <button id="adicionar-encomenda" type="submit" class="btn-adicionar">
+            Adicionar
+          </button>
+        </form>
       </section>
     </main>
 
@@ -91,5 +144,6 @@
     </footer>
 
     <script src="./js/encomendas.js"></script>
+    <script src="./js/adicionaEncomenda.js"></script>
   </body>
 </html>
