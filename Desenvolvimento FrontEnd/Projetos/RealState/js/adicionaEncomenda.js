@@ -18,10 +18,9 @@ botaoAdicionar.addEventListener("click", function (e) {
     <td class="servico">${servico}</td>
     <td class="qtde">${quantidade}</td>
     <td class="unitario">${valorUnitario}</td>
-    <td class="total">${total}</td>
+    <td class="total">${formataValor(total)}</td>
   `;
 
   tabela.appendChild(novaLinha);
-
   document.querySelector("#form-encomenda").reset();
 });

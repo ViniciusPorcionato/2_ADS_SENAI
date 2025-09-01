@@ -22,5 +22,16 @@ clientes.forEach((cliente) => {
 });
 
 function calcularTotal(qtde, unitario) {
-  return qtde * unitario;
+  var total = 0;
+  total = qtde * unitario
+  return formataValor(total)
+}
+
+
+function formataValor(valor){
+  var valor_formatado = valor.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+  });
+  return valor_formatado;
 }
