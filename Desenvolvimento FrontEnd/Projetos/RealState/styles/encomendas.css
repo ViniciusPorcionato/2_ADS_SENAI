@@ -125,6 +125,7 @@ td.nome {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 50px;
 }
 
 .form-encomenda h2 {
@@ -196,6 +197,50 @@ select option:hover {
 .btn-adicionar:hover {
   background-color: #8c0303;
 }
+
+.btn-remover {
+  padding: 12px 20px;
+  background-color: #af0404;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-remover:hover {
+  background-color: #8c0303;
+}
+
+.fadeOut{
+  opacity: 0;
+  transition: 1s;
+}
+
+/* Estilo do input de busca */
+.filtrar-tabela {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.filtrar-tabela:focus {
+  border-color: #af0404;
+  box-shadow: 0 0 5px rgba(175, 4, 4, 0.4);
+}
+
+/* Animação para esconder os clientes */
+.invisivel {
+  display: none;
+}
+
 
 
 .footer {

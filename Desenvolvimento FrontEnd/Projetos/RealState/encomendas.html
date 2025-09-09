@@ -26,6 +26,10 @@
 
     <main>
       <section class="container layout-grid">
+
+        <label for="filtrar-tabela">Buscar:</label>
+        <input type="text" id="filtrar-tabela" class="filtrar-tabela" placeholder="Digite o cliente que deseja buscar...n">
+
         <table>
           <thead>
             <tr>
@@ -67,6 +71,10 @@
             </tr>
           </tbody>
         </table>
+
+        <button id="remover-encomenda" type="button" class="btn-remover">
+          Remover Encomenda
+        </button>
 
         <form id="form-encomenda" class="form-encomenda">
           <h2>Adicionar Encomenda</h2>
@@ -145,5 +153,7 @@
 
     <script src="./js/encomendas.js"></script>
     <script src="./js/adicionaEncomenda.js"></script>
+    <script src="./js/removerEncomenda.js"></script>
+    <script src="./js/buscarEncomenda.js"></script>
   </body>
 </html>
