@@ -1,0 +1,87 @@
+#SW1
+
+en
+conf t
+hostname SW1
+vlan 10
+name TI
+vlan 20
+name SRV
+vlan 30
+name RH
+vlan 40
+name PRODUCAO
+exit
+int range fa0/23-24
+switchport mode trunk
+exit
+vtp domain senai
+vtp password senai123
+vtp mode server
+int range fa0/1-2
+switchport mode access
+switchport access vlan 20
+exit
+do show vlan brief
+
+#SW2
+
+en
+conf t
+hostname SW2
+vtp mode client
+vtp domain senai
+vtp password senai123
+int range fa0/21-22
+switchport mode trunk
+exit
+int range fa0/1-3
+switchport mode access
+switchport access vlan 10
+exit
+do show vlan brief
+
+#SW3
+
+en
+conf t
+hostname SW3
+vtp mode client
+vtp domain senai
+vtp password senai123
+exit
+int range fa0/1-3
+switchport mode access
+switchport access vlan 30
+exit
+do show vlan brief
+
+#SW4
+
+en
+conf t
+hostname SW4
+vtp mode client
+vtp domain senai
+vtp password senai123
+exit
+int range fa0/1-3
+switchport mode access
+switchport access vlan 30
+exit
+do show vlan brief
+
+#SW5
+
+en
+conf t
+hostname SW5
+vtp mode client
+vtp domain senai
+vtp password senai123
+exit
+int range fa0/1-3
+switchport mode access
+switchport access vlan 40
+exit
+do show vlan brief
