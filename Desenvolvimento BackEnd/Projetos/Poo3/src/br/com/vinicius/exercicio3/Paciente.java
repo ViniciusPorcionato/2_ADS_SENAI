@@ -69,11 +69,11 @@ public class Paciente {
     }
 
     public void imprimirDados() {
-        System.out.println("Nome: " + this.nome);
-        System.out.println("RG: " + this.rg);
-        System.out.println("Endereço: " + this.endereco);
-        System.out.println("Telefone: " + this.telefone);
-        System.out.println("Data de Nascimento: " + this.dataNascimento);
-        System.out.println("Profissão: " + this.profissao);
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("RG: " + this.getRg());
+        System.out.println("Endereço: " + this.getEndereco());
+        System.out.println("Telefone: " + this.getTelefone());
+        System.out.println("Data de Nascimento: " + this.getDataNascimento());
+        System.out.println("Profissão: " + this.getProfissao());
     }
 }
