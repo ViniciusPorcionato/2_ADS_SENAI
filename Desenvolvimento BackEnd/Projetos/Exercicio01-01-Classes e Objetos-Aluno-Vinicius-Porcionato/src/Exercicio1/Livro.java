@@ -62,7 +62,7 @@ public class Livro {
         }
 
         if (this.getPaginasLidas() + qtd > this.getPaginas()) {
-            setPaginasLidas(getPaginas()); // Corrigido: antes estava setPaginas()
+            setPaginasLidas(getPaginas());
         } else {
             setPaginasLidas(getPaginasLidas() + qtd);
         }
@@ -72,12 +72,10 @@ public class Livro {
         return (getPaginasLidas() * 100.0) / getPaginas();
     }
 
-    public boolean emprestar() {
+    public void emprestar() {
         if (!getEmprestado()) {
             setEmprestado(true);
-            return true;
         }
-        return false;
     }
 
     public void devolver() {

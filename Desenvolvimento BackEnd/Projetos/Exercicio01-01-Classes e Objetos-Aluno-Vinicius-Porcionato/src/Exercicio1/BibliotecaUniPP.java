@@ -10,19 +10,19 @@ public class BibliotecaUniPP {
         livro1.emprestar();
         livro1.ler(600);
         livro1.exibirInformacoes();
-        System.out.println("Progresso: " + livro1.verProgresso() + "%\n");
+        System.out.printf("Progresso: %.2f%%\n\n", livro1.verProgresso());
         livro1.devolver();
 
         livro2.emprestar();
         livro2.ler(100);
         livro2.exibirInformacoes();
-        System.out.println("Progresso: " + livro2.verProgresso() + "%\n");
+        System.out.printf("Progresso: %.2f%%\n\n", livro2.verProgresso());
         livro2.devolver();
 
         livro3.emprestar();
         livro3.ler(250);
         livro3.exibirInformacoes();
-        System.out.println("Progresso: " + livro3.verProgresso() + "%\n");
+        System.out.printf("Progresso: %.2f%%\n\n", livro3.verProgresso());
         livro3.devolver();
 
     }
