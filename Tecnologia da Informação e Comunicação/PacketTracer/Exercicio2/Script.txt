@@ -1,0 +1,101 @@
+en
+conf t
+hostname SW1
+enable secret cisco
+line console 0
+password cisco
+login
+exit
+service password-encryption
+line vty 0 4
+password cisco
+login
+exit
+vtp domain cisco
+vtp password cisco
+vtp mode server
+vlan 10
+name SRV
+vlan 20
+name ADM
+vlan 30
+name TI
+exit
+int range gi0/1-2
+switchport mode trunk
+switchport trunk all vlan all
+exit
+int range fa0/1
+switchport mode access
+switchport access vlan 10
+exit
+int range fa0/2-9
+switchport mode access
+switchport access vlan 20
+exit
+int range fa0/10-19
+switchport mode access
+switchport access vlan 30
+do wr
+do show vlan brief
+
+===========================================================================
+
+en
+conf t
+hostname SW2
+enable secret cisco
+line console 0
+password cisco
+login
+exit
+service password-encryption
+line vty 0 4
+password cisco
+login
+exit
+vtp domain cisco
+vtp password cisco
+vtp mode client
+int range gi0/2
+switchport mode trunk
+switchport trunk all vlan all
+exit
+int range fa0/1-9
+switchport mode access
+switchport access vlan 20
+exit
+int range fa0/10-19
+switchport mode access
+switchport access vlan 30
+do wr
+do show vlan brief
+
+===========================================================================
+
+en
+conf t
+int gi0/0/0
+no shut
+exit
+int gi0/0/0.10
+description #####VLAN SRV#####
+encapsulation dot1Q 10
+ip address 192.168.1.1 255.255.255.0
+ip helper-address 192.168.1.10
+exit
+int gi0/0/0.20
+description #####VLAN ADM#####
+encapsulation dot1Q 20
+ip address 192.168.10.1 255.255.255.0
+ip helper-address 192.168.1.10
+exit
+int gi0/0/0.30
+description #####VLAN TI#####
+encapsulation dot1Q 30
+ip address 192.168.20.1 255.255.255.0
+ip helper-address 192.168.1.10
+exit
+
+
+
