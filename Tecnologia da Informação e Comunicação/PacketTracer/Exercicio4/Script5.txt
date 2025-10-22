@@ -1,0 +1,46 @@
+#R1
+enable
+conf t
+hostname R1
+int gi 0/0/0
+no shut
+ip add 192.168.0.1 255.255.255.0
+int serial 0/1/0
+ip add 5.5.5.1 255.255.255.252
+no shut
+exit
+ip route 172.16.5.0 255.255.255.0 5.5.5.2
+do wr
+
+--------------------------------------------
+
+#R2
+enable
+conf t
+hostname R2
+int serial 0/1/0
+ip add 5.5.5.2 255.255.255.252
+no shut
+int serial 0/1/1
+ip add 5.5.5.5 255.255.255.252
+no shut
+exit
+ip route 172.16.5.0 255.255.255.0 5.5.5.6
+ip route 192.168.0.0 255.255.255.0 5.5.5.1
+do wr
+
+--------------------------------------------
+
+#R3
+enable
+conf t
+hostname R3
+int gi 0/0/0
+no shut
+ip add 172.16.5.1 255.255.255.0
+int serial 0/1/1
+ip add 5.5.5.6 255.255.255.252
+no shut
+exit
+ip route 192.168.0.0 255.255.255.0 5.5.5.5
+do wr

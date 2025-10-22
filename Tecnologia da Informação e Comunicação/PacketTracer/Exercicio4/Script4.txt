@@ -1,0 +1,29 @@
+en
+conf t
+hostname R1
+int gi0/0/0
+ip address 192.168.0.1 255.255.255.0
+no shutdown
+exit
+int serial0/1/0
+ip address 5.5.5.1 255.255.255.252
+no shutdown
+exit
+ip route 172.16.5.0 255.255.255.0 5.5.5.2
+do wr
+
+====================================
+
+en
+conf t
+hostname R2
+interface gigabitEthernet0/0/0
+ip address 172.16.5.1 255.255.255.0
+no shutdown
+exit
+interface serial0/1/0
+ip address 5.5.5.2 255.255.255.252
+no shutdown
+exit
+ip route 192.168.0.0 255.255.255.0 5.5.5.1
+do wr
