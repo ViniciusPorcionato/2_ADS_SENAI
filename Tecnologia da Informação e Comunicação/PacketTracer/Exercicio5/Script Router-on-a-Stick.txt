@@ -1,0 +1,142 @@
+! Configuração do SW1
+enable
+configure terminal
+hostname SW1
+vlan 2
+name VLAN2
+vlan 3
+name VLAN3
+vlan 4
+name VLAN4
+vlan 50
+name VLAN50
+exit
+interface GigabitEthernet0/1
+switchport mode trunk
+interface FastEthernet0/1
+switchport mode access
+switchport access vlan 50
+exit
+interface FastEthernet0/2
+switchport mode access
+switchport access vlan 2
+exit
+interface FastEthernet0/3
+switchport mode access
+switchport access vlan 3
+exit
+interface FastEthernet0/4
+switchport mode access
+switchport access vlan 4
+exit
+end
+write memory
+
+==========================================================================================
+
+! Configuração do SW2
+enable
+configure terminal
+hostname SW2
+vlan 10
+name VLAN10
+vlan 20
+name VLAN20
+vlan 30
+name VLAN30
+vlan 50
+name VLAN50
+exit
+interface GigabitEthernet0/1
+switchport mode trunk
+interface FastEthernet0/1
+switchport mode access
+switchport access vlan 50
+exit
+interface FastEthernet0/2
+switchport mode access
+switchport access vlan 10
+exit
+interface FastEthernet0/3
+switchport mode access
+switchport access vlan 20
+exit
+interface FastEthernet0/4
+switchport mode access
+switchport access vlan 30
+exit
+end
+write memory
+
+==========================================================================================
+! Configuração do R1
+
+enable
+conf t
+hostname R1
+interface GigabitEthernet0/0/0
+no shut
+interface Serial0/1/0
+no shut
+ip add 33.43.15.1 255.255.255.252
+exit
+interface GigabitEthernet0/0/0.2
+encapsulation dot1Q 2
+ip add 192.168.0.1 255.255.255.0
+ip helper-address 192.168.50.10
+exit
+interface GigabitEthernet0/0/0.3
+encapsulation dot1Q 3
+ip add 192.168.1.1 255.255.255.0
+ip helper-address 192.168.50.10
+exit
+interface GigabitEthernet0/0/0.4
+encapsulation dot1Q 4
+ip add 192.168.2.1 255.255.255.0
+ip helper-address 192.168.50.10
+exit
+interface GigabitEthernet0/0/0.50
+encapsulation dot1Q 50
+ip add 192.168.50.1 255.255.255.0
+exit
+ip route 172.16.0.0 255.255.0.0 33.43.15.2
+exit
+write memory
+
+==========================================================================================
+! Configuração do R2
+
+enable
+conf t
+hostname R2
+interface GigabitEthernet0/0/0
+no shut
+interface Serial0/1/0
+no shut
+ip add 33.43.15.2 255.255.255.252
+exit
+interface GigabitEthernet0/0/0.10
+encapsulation dot1Q 10
+ip add 172.16.0.1 255.255.255.0
+ip helper-address 172.16.50.10
+exit
+interface GigabitEthernet0/0/0.20
+encapsulation dot1Q 20
+ip add 172.16.1.1 255.255.255.0
+ip helper-address 172.16.50.10
+exit
+interface GigabitEthernet0/0/0.30
+encapsulation dot1Q 30
+ip add 172.16.2.1 255.255.255.0
+ip helper-address 172.16.50.10
+exit
+interface GigabitEthernet0/0/0.50
+encapsulation dot1Q 50
+ip add 172.16.50.1 255.255.255.0
+exit
+ip route 192.168.0.0 255.255.0.0 33.43.15.1
+exit
+write memory
+
+
+
