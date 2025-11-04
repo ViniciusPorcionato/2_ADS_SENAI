@@ -1,0 +1,92 @@
+.aboutPage{
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.aboutHeader {
+    background-color: #8D001A;
+    padding: 60px 0 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .aboutHeaderContent {
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+  }
+  
+  .aboutTitle {
+    font-family: Poppins-Bold;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+  }
+  
+  .aboutSubtitle {
+    font-family: Poppins-SemiBold;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+  }
+  
+  .aboutContainer {
+    width: 100%;
+    padding: 0 0 60px;
+    background-color: #fff;
+  }
+  
+  .aboutContent {
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Poppins;
+    color: #333;
+  }
+  
+  .aboutSection {
+    margin-bottom: 40px;
+  }
+  
+  .aboutSection h3 {
+    font-family: Poppins-SemiBold;
+    font-size: 20px;
+    color: #8D001A;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .aboutSection p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .aboutHeader {
+      padding: 40px 0 30px;
+    }
+    
+    .aboutTitle {
+      font-size: 28px;
+    }
+    
+    .aboutSubtitle {
+      font-size: 20px;
+    }
+    
+    .aboutSection h3 {
+      font-size: 18px;
+    }
+    
+    .aboutSection p {
+      font-size: 15px;
+    }
+  }
