@@ -1,0 +1,107 @@
+***************Router 1 - R1***************
+en
+conf t
+hostname R1
+int serial 0/1/0
+no shut
+ip add 10.0.0.1 255.255.255.252
+exit
+int serial 0/1/1
+no shut
+ip add 12.0.0.1 255.255.255.252
+exit
+int gi 0/0/0
+no shut
+ip add 192.168.0.1 255.255.255.0
+exit
+router rip
+version 2
+network 10.0.0.0
+network 12.0.0.0
+network 192.168.0.0
+no auto-summary
+exit
+============================================================================
+
+***************Router 2 - R2***************
+en
+conf t
+hostname R2
+int serial 0/1/0
+no shut
+ip add 10.0.0.2 255.255.255.252
+exit
+int serial 0/1/1
+no shut
+ip add 11.0.0.1 255.255.255.252
+exit
+router rip
+version 2
+network 10.0.0.0
+network 11.0.0.0
+no auto-summary
+exit
+============================================================================
+
+***************Router 3 - R3***************
+en
+conf t
+hostname R3
+int serial 0/1/1
+no shut
+ip add 11.0.0.2 255.255.255.252
+exit
+int serial 0/2/0
+no shut
+ip add 14.0.0.1 255.255.255.252
+exit
+router rip
+version 2
+network 11.0.0.0
+network 14.0.0.0
+no auto-summary
+exit
+============================================================================
+
+***************Router 4 - R4***************
+en
+conf t
+hostname R4
+int serial 0/1/1
+no shut
+ip add 12.0.0.2 255.255.255.252
+exit
+int serial 0/1/0
+no shut
+ip add 13.0.0.1 255.255.255.252
+exit
+router rip
+version 2
+network 12.0.0.0
+network 13.0.0.0
+no auto-summary
+exit
+============================================================================
+***************Router 5 - R5***************
+en
+conf t
+hostname R5
+int serial 0/2/0
+no shut
+ip add 14.0.0.2 255.255.255.252
+exit
+int serial 0/1/0
+no shut
+ip add 13.0.0.2 255.255.255.252
+exit
+int gi 0/0/0
+no shut
+ip add 172.16.0.1 255.255.255.0
+exit
+router rip
+version 2
+network 13.0.0.0
+network 14.0.0.0
+network 172.16.0.0
+no auto-summary
+exit
