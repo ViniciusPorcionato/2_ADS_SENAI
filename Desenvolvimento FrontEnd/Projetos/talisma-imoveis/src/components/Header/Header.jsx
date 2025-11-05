@@ -40,7 +40,7 @@ export default function Header() {
           <Link className={styles.link} href="/imoveis">Imóveis</Link>
           <Link className={styles.link} href="/about">Sobre nós</Link>
           <Link className={styles.link} href="/contato">Contato</Link>
-          <Link className={styles.link} href="/">Cadastro Imóveis</Link>
+          <Link className={styles.link} href="/property-registration">Cadastro Imóveis</Link>
           <Link className={styles.link} href="/">Cadastro Usuários</Link>
           
           <div className={styles.mobileAvatar}>

@@ -1,0 +1,230 @@
+.propertyRegistrationContainer {
+  background-color: #f9f9f9;
+  min-height: 100%;
+  
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.form {
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #8d001a;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  margin-top: 2.5rem;
+}
+.form h3:first-of-type {
+  margin-top: 0;
+}
+
+.formRow {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.row4Cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.row3Cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.row3ColsCidade {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.rowMobiliadoDescricao {
+  grid-template-columns: 1fr 3fr;
+  align-items: flex-start;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+}
+
+.formGroup label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  background-color: #e4e4e4;
+  border: 1px solid #8d001a;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: black;
+  font-family: Poppins;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236B7281' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding-top: 0.75rem;
+}
+
+.radioGroup input[type="radio"] {
+  display: none;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0;
+  color: #555;
+}
+
+.radioLabel::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.radioGroup input[type="radio"]:checked + .radioLabel::before {
+  border-color: #8d001a;
+  background-color: #8d001a;
+  box-shadow: 0 0 0 3px white inset;
+}
+
+.bottomSection {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+  align-items: flex-end;
+  margin-top: 2.5rem;
+}
+
+.uploadArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 250px;
+  color: #6b7281;
+  cursor: pointer;
+}
+
+.uploadArea p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.btnCancel {
+  flex: 1;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btnRegister {
+  flex: 1;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #8d001a;
+  color: #ffffff;
+  border: none;
+}
+
+.btnCancel:hover {
+  background-color: #d1d1d1;
+}
+.btnRegister:hover {
+  background-color: #960e0e;
+}
+
+@media (max-width: 1024px) {
+  .row4Cols,
+  .row3Cols,
+  .row3ColsCidade,
+  .rowMobiliadoDescricao {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .row4Cols,
+  .row3Cols,
+  .row3ColsCidade,
+  .rowMobiliadoDescricao,
+  .bottomSection {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomSection {
+    gap: 2rem;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+  }
+
+  .radioGroup {
+    padding-top: 0.25rem;
+  }
+}
