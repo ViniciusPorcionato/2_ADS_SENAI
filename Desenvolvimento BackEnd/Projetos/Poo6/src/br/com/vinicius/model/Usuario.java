@@ -4,10 +4,9 @@ public class Usuario extends Pessoa implements IImprimivel, ISeguranca {
     private String nomeUsuario;
     private String senha;
 
-    public Usuario(String nomeCompleto, int idade, String nomeUsuario, String senha) {
-        super(nomeCompleto, idade);
-        this.setNomeUsuario(nomeUsuario);
-        this.setSenha(senha);
+    public Usuario(String nu,String s) {
+        this.setNomeUsuario(nu);
+        this.setSenha(s);
     }
 
     public Usuario() {}
@@ -17,7 +16,11 @@ public class Usuario extends Pessoa implements IImprimivel, ISeguranca {
     }
 
     public void setNomeUsuario(String nomeUsuario) {
-        this.nomeUsuario = nomeUsuario;
+        if (nomeUsuario.length() > 3 && nomeUsuario.length() < 10){
+            this.nomeUsuario = nomeUsuario;
+        }else{
+            System.out.println("Nome de usuário inválido!");
+        }
     }
 
     public String getSenha() {
@@ -25,7 +28,11 @@ public class Usuario extends Pessoa implements IImprimivel, ISeguranca {
     }
 
     public void setSenha(String senha) {
-        this.senha = senha;
+        if (senha.length() == 8){
+            this.senha = senha;
+        }else{
+            System.out.println("Senha inválida! Não possui 8 caracteres");
+        }
     }
 
     @Override

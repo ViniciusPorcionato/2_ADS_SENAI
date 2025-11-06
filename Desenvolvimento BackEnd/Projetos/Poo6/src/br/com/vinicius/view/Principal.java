@@ -5,7 +5,7 @@ import br.com.vinicius.model.Usuario;
 
 public class Principal {
     public static void main(String[] args) {
-        Usuario usuario = new Usuario("Vinícius Porcionato", 22, "viniciusdev", "1234");
+        Usuario usuario = new Usuario("viniciusdev", "12345678");
         Produto produto = new Produto("Notebook Lenovo", 5);
 
         System.out.println("Validação do Usuário: " + (usuario.validar() ? "Válido" : "Inválido"));

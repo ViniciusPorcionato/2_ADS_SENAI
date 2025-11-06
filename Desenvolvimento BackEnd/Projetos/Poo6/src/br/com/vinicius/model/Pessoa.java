@@ -1,12 +1,13 @@
 package br.com.vinicius.model;
 
 public abstract class Pessoa {
+
     protected String nomeCompleto;
     protected int idade;
 
-    public Pessoa(String nomeCompleto, int idade) {
-        this.setNomeCompleto(nomeCompleto);
-        this.setIdade(idade);
+    public Pessoa(String nc, int i) {
+        this.setNomeCompleto(nc);
+        this.setIdade(i);
     }
 
     public Pessoa() {
@@ -17,7 +18,12 @@ public abstract class Pessoa {
     }
 
     public void setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
+        if (nomeCompleto.length() > 5){
+            this.nomeCompleto = nomeCompleto;
+        }else{
+            System.out.println("Nome inválido!");
+        }
+
     }
 
     public int getIdade() {
@@ -25,6 +31,10 @@ public abstract class Pessoa {
     }
 
     public void setIdade(int idade) {
-        this.idade = idade;
+        if (idade >= 18){
+            this.idade = idade;
+        }else{
+            System.out.println("Idade inválida!");
+        }
     }
 }
