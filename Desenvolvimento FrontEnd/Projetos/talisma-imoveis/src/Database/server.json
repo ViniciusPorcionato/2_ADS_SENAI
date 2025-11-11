@@ -1,0 +1,23 @@
+{
+  "imoveis": [
+    {
+      "id": "0207",
+      "tipoImovel": "Casa",
+      "logradouro": "TESTE1",
+      "numero": "TESTE1",
+      "bairro": "TESTE1",
+      "cidade": "TESTE1",
+      "areaTotal": "TESTE1",
+      "areaConstruida": "TESTE1",
+      "valorVenda": "TESTE1",
+      "valorAluguel": "TESTE1",
+      "valorCondominio": "TESTE1",
+      "quartos": "1",
+      "banheiros": "1",
+      "vagas": "1",
+      "anoConstrucao": "TESTE1",
+      "descricao": "TESTE1",
+      "mobiliado": "nao"
+    }
+  ]
+}
