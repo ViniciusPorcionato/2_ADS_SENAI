@@ -1,4 +1,4 @@
-Script Protocolos de rede - RIP
+Script Protocolos de rede - OSPF
 --------------------------------------------------------------------------
 
 R1
@@ -6,29 +6,24 @@ R1
 enable
 conf t
 hostname R1
-int serial 0/1/0
-no shut 
-ip add 10.0.0.1 255.255.255.252
+interface s0/1/0
+ip address 10.0.0.1 255.255.255.252
+no shutdown
 exit
-int serial 0/1/1
-no shut
-ip add 12.0.0.1 255.255.255.252
+interface s0/1/1
+ip address 12.0.0.1 255.255.255.252
+no shutdown
 exit
-router rip
-version 2
-network 10.0.0.0
-network 192.168.0.0
-network 172.16.0.0
-network 11.0.0.0
-network 12.0.0.0
-network 13.0.0.0
-network 14.0.0.0
-no auto-summary
+interface g0/0/0
+ip address 192.168.0.1 255.255.255.0
+no shutdown
 exit
-int gi 0/0/0
-no shut
-ip add 192.168.0.1 255.255.255.0
+router ospf 1
+network 10.0.0.0 0.0.0.3 area 0
+network 12.0.0.0 0.0.0.3 area 0
+network 192.168.0.0 0.0.0.255 area 0
 exit
+
 
 --------------------------------------------------------------------------
 R2
@@ -36,25 +31,19 @@ R2
 enable
 conf t
 hostname R2
-int serial 0/1/0
-no shut 
-ip add 10.0.0.2 255.255.255.252
+interface s0/1/0
+ip address 10.0.0.2 255.255.255.252
+no shutdown
 exit
-int serial 0/1/1
-no shut
-ip add 11.0.0.1 255.255.255.252
+interface s0/1/1
+ip address 11.0.0.1 255.255.255.252
+no shutdown
 exit
-router rip
-version 2
-network 10.0.0.0
-network 192.168.0.0
-network 172.16.0.0
-network 11.0.0.0
-network 12.0.0.0
-network 13.0.0.0
-network 14.0.0.0
-no auto-summary
+router ospf 1
+network 10.0.0.0 0.0.0.3 area 0
+network 11.0.0.0 0.0.0.3 area 0
 exit
+
 
 --------------------------------------------------------------------------
 
@@ -63,25 +52,19 @@ R3
 enable
 conf t
 hostname R3
-int serial 0/2/0
-no shut 
-ip add 14.0.0.1 255.255.255.252
+interface s0/2/0
+ip address 14.0.0.1 255.255.255.252
+no shutdown
 exit
-int serial 0/1/1
-no shut
-ip add 11.0.0.2 255.255.255.252
+interface s0/1/1
+ip address 11.0.0.2 255.255.255.252
+no shutdown
 exit
-router rip
-version 2
-network 10.0.0.0
-network 192.168.0.0
-network 172.16.0.0
-network 11.0.0.0
-network 12.0.0.0
-network 13.0.0.0
-network 14.0.0.0
-no auto-summary
+router ospf 1
+network 11.0.0.0 0.0.0.3 area 0
+network 14.0.0.0 0.0.0.3 area 0
 exit
+
 
 --------------------------------------------------------------------------
 
@@ -90,25 +73,19 @@ R4
 enable
 conf t
 hostname R4
-int serial 0/1/0
-no shut 
-ip add 13.0.0.1 255.255.255.252
+interface s0/1/0
+ip address 13.0.0.1 255.255.255.252
+no shutdown
 exit
-int serial 0/1/1
-no shut
-ip add 12.0.0.2 255.255.255.252
+interface s0/1/1
+ip address 12.0.0.2 255.255.255.252
+no shutdown
 exit
-router rip
-version 2
-network 10.0.0.0
-network 192.168.0.0
-network 172.16.0.0
-network 11.0.0.0
-network 12.0.0.0
-network 13.0.0.0
-network 14.0.0.0
-no auto-summary
+router ospf 1
+network 12.0.0.0 0.0.0.3 area 0
+network 13.0.0.0 0.0.0.3 area 0
 exit
+
 
 --------------------------------------------------------------------------
 
@@ -117,26 +94,21 @@ R5
 enable
 conf t
 hostname R5
-int serial 0/2/0
-no shut 
-ip add 14.0.0.2 255.255.255.252
+interface s0/2/0
+ip address 14.0.0.2 255.255.255.252
+no shutdown
 exit
-int serial 0/1/0
-no shut
-ip add 13.0.0.2 255.255.255.252
+interface s0/1/0
+ip address 13.0.0.2 255.255.255.252
+no shutdown
 exit
-router rip
-version 2
-network 10.0.0.0
-network 192.168.0.0
-network 172.16.0.0
-network 11.0.0.0
-network 12.0.0.0
-network 13.0.0.0
-network 14.0.0.0
-no auto-summary
+interface g0/0/0
+ip address 172.16.0.1 255.255.255.0
+no shutdown
 exit
-int gi 0/0/0
-no shut
-ip add 172.16.0.1 255.255.255.0
+router ospf 1
+network 13.0.0.0 0.0.0.3 area 0
+network 14.0.0.0 0.0.0.3 area 0
+network 172.16.0.0 0.0.0.255 area 0
 exit
+
