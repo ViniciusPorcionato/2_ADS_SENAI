@@ -1,0 +1,158 @@
+==========Roteador - R1 Backbone=========
+
+enable
+conf t
+hostname R1
+int serial 0/1/0
+ip add 10.0.0.2 255.255.255.252
+no shut
+int serial 0/1/1
+ip add 20.0.0.1 255.255.255.252 
+no shut
+int serial 0/2/0
+ip add 20.0.0.5 255.255.255.252
+no shut
+exit
+route ospf 10
+network 10.0.0.0 0.0.0.3 area 74
+network 20.0.0.0 0.0.0.3 area 0
+network 20.0.0.4 0.0.0.3 area 0
+
+==========Roteador - R2 Backbone=========
+enable
+conf t
+hostname R2
+int serial 0/2/1
+ip add 20.0.0.9 255.255.255.252 
+no shut
+int serial 0/2/0
+ip add 20.0.0.6 255.255.255.252
+no shut
+exit
+route ospf 10
+network 20.0.0.4 0.0.0.3 area 0
+network 20.0.0.8 0.0.0.3 area 0
+
+==========Roteador - R3 Backbone========
+enable
+conf t
+hostname R3
+int serial 0/1/1
+ip add 20.0.0.2 255.255.255.252  
+no shut
+int serial 0/1/0
+ip add 20.0.0.13 255.255.255.252
+no shut
+exit
+route ospf 10
+network 20.0.0.0 0.0.0.3 area 0
+network 20.0.0.12 0.0.0.3 area 0
+
+==========Roteador - R4 Backbone=======
+enable
+conf t
+hostname R4
+int serial 0/2/0
+ip add 30.0.0.2 255.255.255.252
+no shut
+int serial 0/2/1
+ip add 20.0.0.10 255.255.255.252  
+no shut
+int serial 0/1/0
+ip add 20.0.0.14 255.255.255.252
+no shut
+exit
+route ospf 10
+network 30.0.0.0 0.0.0.3 area 51
+network 20.0.0.12 0.0.0.3 area 0
+network 20.0.0.8 0.0.0.3 area 0
+
+==========Roteador - R5 Area 74==========
+enable
+conf t
+hostname R5
+int serial 0/1/0
+ip add 10.0.0.1 255.255.255.252
+no shut
+int gi 0/0/0
+ip add 192.168.0.1 255.255.255.0
+no shut
+exit
+route ospf 74
+network 10.0.0.0 0.0.0.3 area 74
+network 192.168.0.0 0.0.0.255 area 74
+exit
+ip dhcp excluded-address 192.168.0.0 192.168.0.10
+ip dhcp pool REDEA
+default-router 192.168.0.1
+domain-name REDEA
+network 192.168.0.0 255.255.255.0
+exit
+
+==========Roteador - R6 Area 51=========
+enable
+conf t
+hostname R6
+int serial 0/2/0
+ip add 30.0.0.1 255.255.255.252
+no shut
+int gi 0/0/0
+ip add 172.16.51.1 255.255.255.0
+no shut
+exit
+route ospf 51
+network 30.0.0.0 0.0.0.3 area 51
+network 172.16.51.0 0.0.0.255 area 51
+exit
+ip dhcp excluded-address 172.16.51.0 172.16.51.10
+ip dhcp pool REDEB
+default-router 172.16.51.1
+domain-name REDEB
+network 172.16.51.0 255.255.255.0
+exit
+
+==========Roteador - R7 Area 60==========
+enable
+conf t
+hostname R7
+int serial 0/1/1
+ip add 40.0.0.2 255.255.255.252
+no shut
+int gi 0/0/0
+ip add 172.16.61.1 255.255.255.0
+no shut
+int gi 0/0/2
+ip add 172.16.62.1 255.255.255.0
+no shut
+exit
+route ospf 60
+network 40.0.0.0 0.0.0.3 area 60
+network 172.16.61.0 0.0.0.255 area 60
+network 172.16.62.0 0.0.0.255 area 60
+exit
+ip dhcp excluded-address 172.16.61.1 172.16.61.10
+ip dhcp pool REDEC
+default-router 172.16.61.1
+network 172.16.61.0 255.255.255.0
+domain-name REDEC
+exit
+ip dhcp excluded-address 172.16.62.1 172.16.62.10
+ip dhcp pool REDED
+default-router 172.16.62.1
+network 172.16.62.0 255.255.255.0
+domain-name REDED
+exit
+
+
+
+
+enable
+conf t
+hostname R4
+int serial 0/1/1
+ip add 40.0.0.1 255.255.255.252
+no shut
+exit
+route ospf 10
+network 40.0.0.0 0.0.0.3 area 60
+exit
