@@ -37,11 +37,11 @@ export default function Header() {
           className={`${styles.navbar} ${menuOpen ? styles.navbarOpen : ""}`}
         >
           <Link className={styles.link} href="/">Início</Link>
-          <Link className={styles.link} href="/imoveis">Imóveis</Link>
+          <Link className={styles.link} href="/properties">Imóveis</Link>
           <Link className={styles.link} href="/about">Sobre nós</Link>
           <Link className={styles.link} href="/contato">Contato</Link>
           <Link className={styles.link} href="/property-registration">Cadastro Imóveis</Link>
-          <Link className={styles.link} href="/">Cadastro Usuários</Link>
+          <Link className={styles.link} href="/user-registration">Cadastro Usuários</Link>
           
           <div className={styles.mobileAvatar}>
             <LoginDialog>

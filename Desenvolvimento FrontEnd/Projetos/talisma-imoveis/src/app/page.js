@@ -104,7 +104,6 @@ export default function HomePage() {
               <Link href="/detalhes/1" className={styles.cardLink}>
                 <div className={styles.card}>
                   <Image
-                    src="/assets/images/casa1-1.png"
                     alt="Casa em São Paulo"
                     className={styles.imageCard}
                     width={280}
@@ -121,7 +120,6 @@ export default function HomePage() {
               <Link href="/detalhes/2" className={styles.cardLink}>
                 <div className={styles.card}>
                   <Image
-                    src="/assets/images/casa4-1.png"
                     alt="Casa no Praia"
                     className={styles.imageCard}
                     width={280}
@@ -138,7 +136,6 @@ export default function HomePage() {
               <Link href="/detalhes/3" className={styles.cardLink}>
                 <div className={styles.card}>
                   <Image
-                    src="/assets/images/casa2-1.png"
                     alt="Casa no Praia"
                     className={styles.imageCard}
                     width={280}

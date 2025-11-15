@@ -1,7 +1,6 @@
 .propertyRegistrationContainer {
   background-color: #f9f9f9;
   min-height: 100%;
-  
 }
 
 .formContainer {
@@ -42,13 +41,27 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.row3ColsCidade {
-  grid-template-columns: 2fr 1fr 1fr;
+.row2Cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.rowCidadeSmall {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.logradouroWide {
+  grid-column: span 2;
 }
 
 .rowMobiliadoDescricao {
   grid-template-columns: 1fr 3fr;
   align-items: flex-start;
+}
+
+.row1Col {
+  grid-template-columns: 1fr;
 }
 
 .formGroup {
@@ -162,6 +175,10 @@
   font-size: 0.9rem;
 }
 
+.inputFileHidden {
+  display: none;
+}
+
 .buttonContainer {
   display: flex;
   gap: 1rem;
@@ -198,10 +215,41 @@
   background-color: #960e0e;
 }
 
+.previewContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.previewImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+.message {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #8d001a;
+}
+
+.row3ColsAligned {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 1.5rem;
+}
+
+.row1Col {
+  grid-template-columns: 1fr;
+}
+
 @media (max-width: 1024px) {
   .row4Cols,
   .row3Cols,
-  .row3ColsCidade,
+  .rowCidadeSmall,
   .rowMobiliadoDescricao {
     grid-template-columns: 1fr 1fr;
   }
@@ -210,7 +258,7 @@
 @media (max-width: 768px) {
   .row4Cols,
   .row3Cols,
-  .row3ColsCidade,
+  .rowCidadeSmall,
   .rowMobiliadoDescricao,
   .bottomSection {
     grid-template-columns: 1fr;

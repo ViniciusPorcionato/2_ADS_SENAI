@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./property-registration.module.css";
+import { v4 as uuidv4 } from "uuid";
 
 const UploadIcon = () => (
   <svg
@@ -23,12 +24,17 @@ const UploadIcon = () => (
 export default function PropertyRegistrationPage() {
   const [message, setMessage] = useState("");
   const [mobiliado, setMobiliado] = useState("");
+  const [fotos, setFotos] = useState([]);
+
   const [formData, setFormData] = useState({
     tipoImovel: "",
     logradouro: "",
     numero: "",
     bairro: "",
     cidade: "",
+    cep: "",
+    proprietario: "",
+    finalidade: "",
     areaTotal: "",
     areaConstruida: "",
     valorVenda: "",
@@ -49,14 +55,39 @@ export default function PropertyRegistrationPage() {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleFileChange = (e) => {
+    setFotos([...e.target.files]);
+  };
+
+  const fetchAddressByCep = async (cep) => {
+    if (!cep || cep.length < 8) return;
 
     try {
+      const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+      const data = await response.json();
+      if (!data.erro) {
+        setFormData((prev) => ({
+          ...prev,
+          logradouro: data.logradouro || "",
+          bairro: data.bairro || "",
+          cidade: data.localidade || "",
+        }));
+      }
+    } catch (error) {
+      console.error("Erro ao buscar CEP:", error);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const idRandom = uuidv4();
+      const bodyData = { ...formData, mobiliado };
+
       const response = await fetch("http://localhost:3001/imoveis", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, mobiliado }),
+        body: JSON.stringify({ id: idRandom, ...bodyData }),
       });
 
       if (response.ok) {
@@ -67,6 +98,9 @@ export default function PropertyRegistrationPage() {
           numero: "",
           bairro: "",
           cidade: "",
+          cep: "",
+          proprietario: "",
+          finalidade: "",
           areaTotal: "",
           areaConstruida: "",
           valorVenda: "",
@@ -95,6 +129,9 @@ export default function PropertyRegistrationPage() {
       numero: "",
       bairro: "",
       cidade: "",
+      cep: "",
+      proprietario: "",
+      finalidade: "",
       areaTotal: "",
       areaConstruida: "",
       valorVenda: "",
@@ -106,6 +143,7 @@ export default function PropertyRegistrationPage() {
       anoConstrucao: "",
       descricao: "",
     });
+    setFotos([]);
     setMobiliado("");
     setMessage("");
   };
@@ -116,6 +154,7 @@ export default function PropertyRegistrationPage() {
         <form className={styles.form} onSubmit={handleSubmit}>
           {/* --- INFORMAÇÕES GERAIS --- */}
           <h3 className={styles.subtitle}>INFORMAÇÕES GERAIS</h3>
+
           <div className={`${styles.formRow} ${styles.row4Cols}`}>
             <div className={styles.formGroup}>
               <label htmlFor="tipoImovel">Tipo de Imóvel</label>
@@ -131,61 +170,116 @@ export default function PropertyRegistrationPage() {
                 <option value="Comercial">Comercial</option>
               </select>
             </div>
+
             <div className={styles.formGroup}>
+              <label htmlFor="cep">CEP</label>
+              <input
+                type="text"
+                id="cep"
+                className={styles.input}
+                value={formData.cep}
+                onChange={handleChange}
+                placeholder="Digite o CEP"
+                onBlur={() =>
+                  fetchAddressByCep(formData.cep.replace(/\D/g, ""))
+                }
+              />
+            </div>
+
+            <div className={`${styles.formGroup} ${styles.logradouroWide}`}>
               <label htmlFor="logradouro">Logradouro</label>
               <input
                 type="text"
                 id="logradouro"
+                placeholder="Digite o logradouro da residência"
                 className={styles.input}
                 value={formData.logradouro}
                 onChange={handleChange}
               />
             </div>
+          </div>
+
+          <div className={`${styles.formRow} ${styles.row3ColsAligned}`}>
             <div className={styles.formGroup}>
               <label htmlFor="numero">Número</label>
               <input
                 type="text"
                 id="numero"
+                placeholder="Digite o número da residência"
                 className={styles.input}
                 value={formData.numero}
                 onChange={handleChange}
               />
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="bairro">Bairro</label>
               <input
                 type="text"
                 id="bairro"
+                placeholder="Digite o bairro da residência"
                 className={styles.input}
                 value={formData.bairro}
                 onChange={handleChange}
               />
             </div>
-          </div>
 
-          <div className={`${styles.formRow} ${styles.row3ColsCidade}`}>
             <div className={styles.formGroup}>
               <label htmlFor="cidade">Cidade</label>
               <input
                 type="text"
                 id="cidade"
+                placeholder="Digite a cidade da residência"
                 className={styles.input}
                 value={formData.cidade}
                 onChange={handleChange}
               />
             </div>
+          </div>
+          <div className={`${styles.formRow} ${styles.row1Col}`}>
             <div className={styles.formGroup}>
-              <label htmlFor="areaTotal">Área Total (M²)</label>
+              <label htmlFor="proprietario">Proprietário</label>
+              <input
+                type="text"
+                id="proprietario"
+                placeholder="Digite o nome do proprietário"
+                className={styles.input}
+                value={formData.proprietario}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className={`${styles.formRow} ${styles.row1Col}`}>
+            <div className={styles.formGroup}>
+              <label htmlFor="finalidade">Finalidade</label>
+              <select
+                id="finalidade"
+                className={styles.select}
+                value={formData.finalidade}
+                onChange={handleChange}
+              >
+                <option value="">Selecione...</option>
+                <option value="Venda">Venda</option>
+                <option value="Locação">Locação</option>
+                <option value="Ambos">Ambos</option>
+              </select>
+            </div>
+          </div>
+
+          <div className={`${styles.formRow} ${styles.row2Cols}`}>
+            <div className={styles.formGroup}>
+              <label htmlFor="areaTotal">Area Total (M²)</label>
               <input
                 type="text"
                 id="areaTotal"
+                placeholder="Digite a area total da residência"
                 className={styles.input}
                 value={formData.areaTotal}
                 onChange={handleChange}
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="areaConstruida">Área Construída (M²)</label>
+              <label htmlFor="areaConstruida">Area Contruída (M²)</label>
               <input
                 type="text"
                 id="areaConstruida"
@@ -198,32 +292,38 @@ export default function PropertyRegistrationPage() {
 
           {/* --- VALORES --- */}
           <h3 className={styles.subtitle}>VALORES</h3>
+
           <div className={`${styles.formRow} ${styles.row3Cols}`}>
             <div className={styles.formGroup}>
               <label htmlFor="valorVenda">Valor Venda (R$)</label>
               <input
                 type="text"
                 id="valorVenda"
+                placeholder="Digite o valor de venda"
                 className={styles.input}
                 value={formData.valorVenda}
                 onChange={handleChange}
               />
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="valorAluguel">Valor Aluguel (R$)</label>
               <input
                 type="text"
                 id="valorAluguel"
+                placeholder="Digite o valor do aluguel"
                 className={styles.input}
                 value={formData.valorAluguel}
                 onChange={handleChange}
               />
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="valorCondominio">Valor Condomínio (R$)</label>
               <input
                 type="text"
                 id="valorCondominio"
+                placeholder="Digite o valor do condomínio"
                 className={styles.input}
                 value={formData.valorCondominio}
                 onChange={handleChange}
@@ -233,6 +333,7 @@ export default function PropertyRegistrationPage() {
 
           {/* --- DETALHES IMÓVEIS --- */}
           <h3 className={styles.subtitle}>DETALHES IMÓVEIS</h3>
+
           <div className={`${styles.formRow} ${styles.row4Cols}`}>
             <div className={styles.formGroup}>
               <label htmlFor="quartos">Número de Quartos</label>
@@ -251,6 +352,7 @@ export default function PropertyRegistrationPage() {
                 <option value="Mais">Mais...</option>
               </select>
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="banheiros">Número de Banheiros</label>
               <select
@@ -268,6 +370,7 @@ export default function PropertyRegistrationPage() {
                 <option value="Mais">Mais...</option>
               </select>
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="vagas">Número de Vagas</label>
               <select
@@ -285,6 +388,7 @@ export default function PropertyRegistrationPage() {
                 <option value="Mais">Mais...</option>
               </select>
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="anoConstrucao">Ano de Construção</label>
               <input
@@ -327,6 +431,7 @@ export default function PropertyRegistrationPage() {
                 </label>
               </div>
             </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="descricao">Descrição</label>
               <textarea
@@ -339,12 +444,19 @@ export default function PropertyRegistrationPage() {
             </div>
           </div>
 
-          {/* BOTÕES */}
+          {/* UPLOAD DE FOTOS */}
           <div className={styles.bottomSection}>
-            <div className={styles.uploadArea}>
+            <label className={styles.uploadArea}>
               <UploadIcon />
               <p>Arraste e solte ou clique para adicionar fotos</p>
-            </div>
+              <input
+                type="file"
+                multiple
+                className={styles.inputFileHidden}
+                onChange={handleFileChange}
+              />
+            </label>
+
             <div className={styles.buttonContainer}>
               <button
                 type="button"
@@ -353,12 +465,23 @@ export default function PropertyRegistrationPage() {
               >
                 Cancelar
               </button>
+
               <button type="submit" className={styles.btnRegister}>
                 Cadastrar
               </button>
             </div>
           </div>
 
+          <div className={styles.previewContainer}>
+            {fotos.length > 0 &&
+              Array.from(fotos).map((file, index) => (
+                <img
+                  key={index}
+                  src={URL.createObjectURL(file)}
+                  className={styles.previewImage}
+                />
+              ))}
+          </div>
           {message && <p className={styles.message}>{message}</p>}
         </form>
       </div>
