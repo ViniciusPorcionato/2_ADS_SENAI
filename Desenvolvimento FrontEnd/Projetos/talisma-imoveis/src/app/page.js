@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, use, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -12,13 +12,25 @@ export default function HomePage() {
   const [properties, setProperties] = useState([]);
   const carouselTrackRef = useRef(null);
 
-  // Função para buscar imóveis
-  const buscarImoveis = async (tipoImovel, cidade, finalidade) => {
-    try {
-      // Ajustando o parâmetro "finalidade" para o JSON Server
-      const finalidadeJson = finalidade === "comprar" ? "Venda" : "Aluguel";
+  //Lógica para aplicar no filtro futuramente
+  // const buscarImoveis = async (tipoImovel, cidade, finalidade) => {
+  //   try {
+  //     const finalidadeJson = finalidade === "comprar" ? "Venda" : "Aluguel";
+  //     const response = await fetch(`http://localhost:3000/imoveis?tipoImovel=${tipoImovel}&cidade=${cidade}&finalidade=${finalidadeJson}`);
+  //     const data = await response.json();
+  //     setProperties(data);
+  //   } catch (error) {
+  //     console.error("Erro ao buscar imóveis:", error);
+  //   }
+  // };
 
-      const response = await fetch(`http://localhost:3000/imoveis?tipoImovel=${tipoImovel}&cidade=${cidade}&finalidade=${finalidadeJson}`);
+  useEffect(() => {
+    buscarImoveis();
+  }, []);
+
+  const buscarImoveis = async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/imoveis`);
       const data = await response.json();
       setProperties(data);
     } catch (error) {
@@ -26,15 +38,14 @@ export default function HomePage() {
     }
   };
 
-  // Função do submit do formulário
-  const handleSearch = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const tipoImovel = form["tipo-imovel"].value;
-    const cidade = form["localizacao"].value;
-    const finalidade = tabAtiva; // "comprar" ou "alugar"
-    buscarImoveis(tipoImovel, cidade, finalidade);
-  };
+  // const handleSearch = (event) => {
+  //   event.preventDefault();
+  //   const form = event.target;
+  //   const tipoImovel = form["tipo-imovel"].value;
+  //   const cidade = form["localizacao"].value;
+  //   const finalidade = tabAtiva;
+  //   buscarImoveis(tipoImovel, cidade, finalidade);
+  // };
 
   const scrollCarousel = (direction) => {
     if (carouselTrackRef.current) {
@@ -48,6 +59,8 @@ export default function HomePage() {
 
   return (
     <div className={styles.pageContainer}>
+      
+      {/* Seção de Busca */}
       <section className={styles.sectionSearch}>
         <Image
           className={styles.imageBanner}
@@ -80,7 +93,10 @@ export default function HomePage() {
 
             <hr className={styles.tabDivider} />
 
-            <form id="searchForm" className={styles.searchForm} onSubmit={handleSearch}>
+            <form id="searchForm" 
+            className={styles.searchForm} 
+            // onSubmit={handleSearch}
+            >
               <div className={styles.formGroup}>
                 <label htmlFor="tipo-imovel">Tipo de Imóvel</label>
                 <select id="tipo-imovel" name="tipo-imovel">
@@ -109,6 +125,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Seção de Destaques */}
       <section className={styles.sectionFeatured}>
         <div className={styles.featuredContainer}>
           <h2>Imóveis em Destaque</h2>
@@ -137,13 +154,71 @@ export default function HomePage() {
                   </Link>
                 ))
               ) : (
-                <p>Nenhum imóvel encontrado</p>
+                <p>Nenhum imóvel encontrado. Tente buscar acima.</p>
               )}
             </div>
             <button className={`${styles.carouselBtn} ${styles.right}`} onClick={() => scrollCarousel(1)}>›</button>
           </div>
         </div>
       </section>
+
+
+      {/* Sessão Sobre a Empresa */}
+      <section className={styles.sectionAbout}>
+        <div className={styles.aboutContainer}>
+          <div className={styles.aboutContent}>
+            <h2>Sobre a Empresa</h2>
+            <p className={styles.aboutSlogan}>
+              Realizando seu sonho de forma sólida, confiável e duradoura
+            </p>
+            <p className={styles.aboutDescription}>
+              Ética profissional e transparência são imprescindíveis ao mercado
+              imobiliário. A TALISMÃ IMÓVEIS oferece aos seus clientes um
+              atendimento personalizado, o que resulta em segurança em todos os
+              negócios realizados, satisfazendo as nossas clientes.
+            </p>
+            <Link href="/about" className={styles.linkAbout}>
+              <button className={styles.aboutButton}>VEJA MAIS <span>{'>'}</span></button>
+            </Link>
+          </div>
+          <div className={styles.aboutMap}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975870295!2d-46.6520!3d-23.5645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUyLjIiUyA0NsKwMzknMDcuMiJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Depoimento */}
+      <section className={styles.clientTestimonial}>
+        <div className={styles.testimonialContainer}>
+          <div className={styles.testimonialContent}>
+            <div className={styles.clientPhotoContainer}>
+              <Image 
+                src={ImagemFamily} 
+                alt="Foto do cliente" 
+                className={styles.clientPhoto}
+                width={400} 
+                height={400}
+              />
+            </div>
+            <div className={styles.testimonialText}>
+              <p className={styles.quote}>
+                "Depoimento do cliente. Ética profissional e transparência são
+                imprescindíveis no mercado imobiliário. A TALISMÃ IMÓVEIS"
+              </p>
+              <p className={styles.clientName}>Maria Oliveira</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

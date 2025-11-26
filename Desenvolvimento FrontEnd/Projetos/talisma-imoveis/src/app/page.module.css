@@ -2,6 +2,7 @@
   background-color: white;
 }
 
+/* --- Section Search --- */
 .sectionSearch {
   width: 100%;
   height: 500px;
@@ -23,7 +24,7 @@
 
 .imageBanner {
   height: 115%;
-  width: auto; /* Adicionado */
+  width: auto;
   object-fit: cover;
   position: absolute;
   left: 0;
@@ -96,17 +97,38 @@
 }
 
 .formGroup label {
-  font-family: var(--font-poppins);
-  font-size: 14px;
+  font-family: Poppins;
+  font-size: 16px;
   margin-bottom: 4px;
+  color: #8d001a;
+  font-weight: 600;
 }
 
 .formGroup select {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-family: var(--font-poppins);
+  width: 100%;
+  padding: 0.9rem 1rem;
   font-size: 14px;
+  background-color: #e4e4e4; 
+  border: 1px solid #8d001a; 
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: black;
+  font-size: 16px;
+  font-family: Poppins;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236B7281' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem; 
+}
+
+.formGroup select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(141, 0, 26, 0.2); 
 }
 
 .btnBuscar {
@@ -126,12 +148,8 @@
   background-color: #6c0015;
 }
 
-.formGroup select#tipo-imovel,
-.formGroup select#localizacao {
-  border: none;
-  color: #8d001a;
-}
 
+/* --- Section Featured --- */
 .sectionFeatured {
   background-color: white;
   padding: 60px 0;
@@ -261,7 +279,7 @@
   cursor: not-allowed;
 }
 
-/* CSS Section Sobre a Empresa */
+/* --- Section Sobre a Empresa --- */
 .sectionAbout {
   width: 100%;
   padding: 80px 0;
@@ -344,7 +362,7 @@
   font-size: 20px;
 }
 
-/* Seção de Depoimento */
+/* --- Seção de Depoimento --- */
 .clientTestimonial {
   width: 100%;
   padding: 60px 0;
@@ -409,17 +427,19 @@
   padding-right: 20px;
 }
 
+/* --- Responsividade --- */
 @media (max-width: 768px) {
-  .about-container {
+  /* Fix: Ajustado para usar camelCase */
+  .aboutContainer {
     flex-direction: column;
   }
 
-  .about-map {
+  .aboutMap {
     width: 100%;
     height: 300px;
   }
 
-  .testimonial-content {
+  .testimonialContent {
     flex-direction: column;
     text-align: center;
     gap: 20px;
@@ -436,7 +456,7 @@
     top: -40px;
   }
 
-  .client-name {
+  .clientName {
     text-align: center;
     padding-right: 0;
   }
