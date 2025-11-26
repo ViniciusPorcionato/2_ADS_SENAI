@@ -114,3 +114,125 @@
   background-color: #49000e;
 }
 
+
+/* Filtros Ativos */
+.filtrosAtivos {
+  background-color: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #8d001a;
+}
+
+.filtrosAtivos h3 {
+  font-family: Poppins-SemiBold;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.filtrosTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.filtroTag {
+  background-color: #8d001a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: Poppins;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.removeFilterBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.removeFilterBtn:hover {
+  transform: scale(1.2);
+}
+
+.limparFiltrosBtn {
+  background-color: transparent;
+  color: #8d001a;
+  border: 2px solid #8d001a;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: Poppins-SemiBold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.limparFiltrosBtn:hover {
+  background-color: #8d001a;
+  color: white;
+}
+
+/* Loading e No Results */
+.loading, .noResults {
+  text-align: center;
+  padding: 3rem;
+  font-family: Poppins;
+  color: #666;
+}
+
+.noResults {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.noResults p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btnVoltar {
+  background-color: #8d001a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: Poppins-SemiBold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btnVoltar:hover {
+  background-color: #6c0015;
+  transform: translateY(-2px);
+}
+
+.resultadoContador {
+  font-family: Poppins-SemiBold;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.propertyTags {
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  color: #8d001a;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-family: Poppins-SemiBold;
+}

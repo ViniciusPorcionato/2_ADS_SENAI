@@ -6,12 +6,13 @@ import { useEffect, useState } from "react";
 import { MapPin } from "lucide-react";
 
 export default function PropertiesPage() {
+
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
     async function fetchProperties() {
       try {
-        const response = await fetch("http://localhost:3001/imoveis");
+        const response = await fetch("http://localhost:3000/imoveis");
         const data = await response.json();
         setProperties(data);
       } catch (error) {
