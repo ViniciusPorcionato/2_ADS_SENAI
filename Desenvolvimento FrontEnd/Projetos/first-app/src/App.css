@@ -1,0 +1,330 @@
+/* =========================
+   GERAIS E RESET
+========================= */
+@font-face {
+  font-family: "Poppins";
+  src: url("../public/fonts/Poppins/Poppins-Medium.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  border: 0;
+  background-color: #111111;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  width: 100%;
+  height: 120px;
+  background-color: #000000;
+  position: relative;
+  z-index: 1000;
+}
+
+.divHeader {
+  /* ALTERADO: max-width 100% para os itens irem para as extremidades */
+  max-width: 100%; 
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px; /* Aumentei um pouco o padding lateral para não colar 100% na borda */
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+/* MENU DESKTOP */
+nav.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav.menu li a:hover {
+  color: #6d24ca;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   HOME: BANNER
+========================= */
+.divBanner {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   HOME: BIOGRAFIA (NOVO LAYOUT)
+========================= */
+.bio {
+  width: 100%;
+  /* Aumentei o max-width para caber imagem e texto lado a lado confortavelmente */
+  max-width: 1100px; 
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.titulo_bio {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* Container FLEX para deixar Imagem e Texto lado a lado */
+.bio-container {
+  display: flex;
+  align-items: flex-start; /* Alinha no topo */
+  justify-content: center;
+  gap: 40px; /* Espaço entre a logo e o texto */
+}
+
+.img_bio {
+  width: 150px; /* Tamanho da logo lateral */
+  flex-shrink: 0; /* Impede a imagem de amassar */
+}
+
+.bio-texto {
+  text-align: justify;
+}
+
+.bio-texto p {
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+/* =========================
+   HOME: LOCALIZAÇÃO
+========================= */
+.mapaGeral {
+  background: linear-gradient(#111111, #6d24ca);
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.mapa-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  height: 400px;
+}
+
+.mapa-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   HOME: SERVIÇOS
+========================= */
+.servicosGeral {
+  padding: 60px 20px;
+  background: linear-gradient(#6d24ca, #111111);
+  color: white;
+}
+
+.titulo_servicos {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.div_servicos {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.servicos ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.servicos li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 5px;
+}
+
+.img_servicos {
+  width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.img_servicos:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   HOME: VÍDEO
+========================= */
+.video-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: black;
+  padding: 40px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.logo_footer {
+  width: 120px;
+}
+
+.contatos_footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.contatos_footer a {
+  color: #6d24ca;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVIDADE (MOBILE)
+========================= */
+@media (max-width: 768px) {
+  /* HEADER MOBILE */
+  header {
+    height: 80px;
+  }
+  
+  .divHeader {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    flex-direction: column;
+  }
+
+  nav.menu.ativo {
+    height: 250px;
+    border-bottom: 2px solid #6d24ca;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  /* HOME MOBILE */
+  .div_servicos {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servicos {
+    width: 100%;
+  }
+  
+  .img_servicos {
+    width: 150px;
+  }
+
+  /* BIOGRAFIA MOBILE - MUDANÇA IMPORTANTE */
+  .bio-container {
+    flex-direction: column; /* Empilha a imagem em cima do texto */
+    align-items: center; /* Centraliza tudo */
+  }
+
+  .img_bio {
+    margin-bottom: 20px; /* Espaço entre imagem e texto no mobile */
+  }
+  
+  /* FOOTER MOBILE */
+  .escrita_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
