@@ -4,7 +4,7 @@ export const metadata = {
   title: "Sobre Nós | Talismã Imóveis",
 };
 
-const aboutPage = () => {
+const AboutPage = () => {
   return (
     <div className={styles.aboutPage}>
       <div className={styles.aboutHeader}>
@@ -63,4 +63,4 @@ const aboutPage = () => {
   );
 };
 
-export default aboutPage;
+export default AboutPage;

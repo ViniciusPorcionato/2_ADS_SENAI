@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { MapPin } from "lucide-react";
 
-export default function PropertiesPage() {
+const PropertiesPage = () => {
   const [properties, setProperties] = useState([]);
   
   const [filtroTipo, setFiltroTipo] = useState("");
@@ -119,7 +119,7 @@ export default function PropertiesPage() {
                   </div>
 
                   <Link
-                    href={`/detalhes?id=${property.id}`}
+                    href={`/details?id=${property.id}`}
                     className={styles.cardButton}
                   >
                     Ver detalhes
@@ -137,3 +137,5 @@ export default function PropertiesPage() {
     </div>
   );
 }
+
+export default PropertiesPage;

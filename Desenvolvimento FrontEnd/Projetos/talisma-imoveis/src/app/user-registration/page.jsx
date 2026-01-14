@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./user-registration.module.css";
 import { v4 as uuidv4 } from "uuid";
 
-export default function UserRegistrationPage() {
+const UserRegistrationPage = () => {
   const [message, setMessage] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
@@ -58,7 +58,7 @@ export default function UserRegistrationPage() {
       const idRandom = uuidv4();
       const { confirmarSenha, ...userData } = formData;
 
-      const response = await fetch("http://localhost:3001/usuarios", {
+      const response = await fetch("http://localhost:3000/usuarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: idRandom, ...userData }),
@@ -178,3 +178,5 @@ export default function UserRegistrationPage() {
     </div>
   );
 }
+
+export default UserRegistrationPage;

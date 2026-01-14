@@ -4,7 +4,7 @@ export const metadata = {
   title: "Termos e Condições | Talismã Imóveis",
 };
 
-const termsPage = () => {
+const TermsPage = () => {
   return (
     <div className={styles.termsPage}>
       <div className={styles.termsHeader}>
@@ -91,4 +91,4 @@ const termsPage = () => {
   );
 };
 
-export default termsPage;
+export default TermsPage;

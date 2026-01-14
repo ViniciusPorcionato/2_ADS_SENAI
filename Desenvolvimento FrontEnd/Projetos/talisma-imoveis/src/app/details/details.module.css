@@ -1,0 +1,272 @@
+/* Estilos específicos para a página de detalhes */
+.propertyDetails {
+  padding: 60px 0;
+  min-height: calc(100vh - 100px);
+}
+
+.detailsContainer {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.propertyGallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainImage {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.mainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnailContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  border-color: #8d001a;
+}
+
+.propertyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.propertyInfo h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.propertyLocation {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.propertyPrice {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #8d001a;
+  margin: 15px 0;
+}
+
+.propertyFeatures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  color: black;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.propertyDescription {
+  margin-top: 20px;
+}
+
+.propertyDescription h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.propertyDescription p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.propertyAmenities {
+  margin-top: 30px;
+}
+
+.propertyAmenities h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.propertyAmenities ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  list-style-type: none;
+}
+
+.propertyAmenities li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.propertyAmenities li:before {
+  content: "✓";
+  color: #8d001a;
+  font-weight: bold;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.contactButton {
+  padding: 15px 30px;
+  background-color: #8d001a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contactButton:hover {
+  background-color: #6c0015;
+  transform: translateY(-2px);
+}
+
+.backButtonSecondary {
+  padding: 15px 30px;
+  background-color: transparent;
+  color: #8d001a;
+  border: 2px solid #8d001a;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.backButtonSecondary:hover {
+  background-color: #8d001a;
+  color: white;
+}
+
+.loadingContainer,
+.errorContainer {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.loadingContainer p {
+  font-size: 18px;
+  color: #666;
+}
+
+.errorContainer h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.backButton {
+  padding: 12px 24px;
+  background-color: #8d001a;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #6c0015;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .detailsContainer {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  
+  .mainImage {
+    height: 300px;
+  }
+  
+  .propertyFeatures,
+  .propertyAmenities ul {
+    grid-template-columns: 1fr;
+  }
+
+  .propertyInfo h1 {
+    font-size: 26px;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+  }
+
+  .contactButton,
+  .backButtonSecondary {
+    width: 100%;
+    text-align: center;
+  }
+}

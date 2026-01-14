@@ -87,6 +87,72 @@
       "anoConstrucao": "2020",
       "descricao": "Casa muito boa",
       "mobiliado": "sim"
+    },
+    {
+      "id": "aded659c-0900-4e97-825e-c4b55dda7bd5",
+      "tipoImovel": "Casa",
+      "logradouro": "Rua Clemente Falcão",
+      "numero": "426",
+      "bairro": "Parque São Rafael",
+      "cidade": "São Paulo",
+      "cep": "08320330",
+      "proprietario": "Vinicius Porcionato",
+      "finalidade": "Venda",
+      "areaTotal": "250",
+      "areaConstruida": "203",
+      "valorVenda": "600.00",
+      "valorAluguel": "",
+      "valorCondominio": "",
+      "quartos": "4",
+      "banheiros": "4",
+      "vagas": "4",
+      "anoConstrucao": "2021",
+      "descricao": "Casa bem bonita",
+      "mobiliado": "sim"
+    },
+    {
+      "id": "b71677cd-b0c6-4b60-9aa3-2dc1a998b2af",
+      "tipoImovel": "Casa",
+      "logradouro": "Rua Clemente Falcão",
+      "numero": "426",
+      "bairro": "Parque São Rafael",
+      "cidade": "São Paulo",
+      "cep": "08320330",
+      "proprietario": "Vinicius Porcionato",
+      "finalidade": "Locação",
+      "areaTotal": "500",
+      "areaConstruida": "400",
+      "valorVenda": "",
+      "valorAluguel": "5000",
+      "valorCondominio": "",
+      "quartos": "5",
+      "banheiros": "3",
+      "vagas": "4",
+      "anoConstrucao": "2021",
+      "descricao": "Casa bem bonita",
+      "mobiliado": "sim"
+    },
+    {
+      "id": "75e0b7b4-7f22-4695-b474-87c8e1ac32aa",
+      "tipoImovel": "Casa",
+      "logradouro": "Rua Clemente Falcão",
+      "numero": "999",
+      "bairro": "Parque São Rafael",
+      "cidade": "São Paulo",
+      "cep": "08320330",
+      "proprietario": "Vinicius",
+      "finalidade": "Venda",
+      "areaTotal": "400",
+      "areaConstruida": "300",
+      "valorVenda": "500.000",
+      "valorAluguel": "",
+      "valorCondominio": "",
+      "quartos": "2",
+      "banheiros": "5",
+      "vagas": "5",
+      "anoConstrucao": "2005",
+      "descricao": "Imovel bom",
+      "mobiliado": "sim"
     }
   ],
   "usuarios": [
@@ -105,6 +171,22 @@
       "rg": "999999999",
       "email": "teste@email.com",
       "senha": "123456789"
+    },
+    {
+      "id": "e12cbbdc-a75c-469d-9914-49592efec413",
+      "nomeCompleto": "Vinicius P",
+      "cpf": "88888888888",
+      "rg": "999999999",
+      "email": "porcionato@email.com",
+      "senha": "123456"
+    },
+    {
+      "id": "1884823f-9aae-4488-8f0d-f69011f378ab",
+      "nomeCompleto": "Porcionato",
+      "cpf": "99999999999",
+      "rg": "888888888",
+      "email": "porcionato@email.com",
+      "senha": "123456"
     }
   ],
   "emails": [
@@ -116,6 +198,33 @@
       "assunto": "informacao",
       "mensagem": "TESTE",
       "dataEnvio": "26/11/2025, 15:27:19"
+    },
+    {
+      "id": "2230e15a-0b4d-40be-88c6-6fdf9d118abf",
+      "nome": "Vinicius Porcinato",
+      "email": "porcionato@gmail.com",
+      "telefone": "11932032962",
+      "assunto": "informacao",
+      "mensagem": "Quero detalhes de um imovel",
+      "dataEnvio": "27/11/2025, 10:39:46"
+    },
+    {
+      "id": "8bb9d53f-19cc-4512-833b-9b7ade66a045",
+      "nome": "Vinicius Porcionato",
+      "email": "porcionato@email.com",
+      "telefone": "11932032962",
+      "assunto": "visita",
+      "mensagem": "Quero agendar uma visita ",
+      "dataEnvio": "27/11/2025, 10:49:20"
+    },
+    {
+      "id": "acd91661-e5f7-4de0-9190-78f694d18922",
+      "nome": "Vinicius Porcionato",
+      "email": "vinicius@email.com",
+      "telefone": "11932032962",
+      "assunto": "informacao",
+      "mensagem": "Informação sobre imovel",
+      "dataEnvio": "27/11/2025, 10:58:25"
     }
   ]
 }

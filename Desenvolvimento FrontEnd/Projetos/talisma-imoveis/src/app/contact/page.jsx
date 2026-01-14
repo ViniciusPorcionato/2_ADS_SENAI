@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { v4 as uuidv4 } from "uuid";
 
 const ContactPage = () => {
-  // 1. Removemos o ID do estado inicial. Ele só deve existir na hora de enviar.
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",

@@ -125,7 +125,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Seção de Destaques */}
       <section className={styles.sectionFeatured}>
         <div className={styles.featuredContainer}>
           <h2>Imóveis em Destaque</h2>
@@ -210,7 +209,7 @@ export default function HomePage() {
             </div>
             <div className={styles.testimonialText}>
               <p className={styles.quote}>
-                "Depoimento do cliente. Ética profissional e transparência são
+                Ética profissional e transparência são
                 imprescindíveis no mercado imobiliário. A TALISMÃ IMÓVEIS"
               </p>
               <p className={styles.clientName}>Maria Oliveira</p>

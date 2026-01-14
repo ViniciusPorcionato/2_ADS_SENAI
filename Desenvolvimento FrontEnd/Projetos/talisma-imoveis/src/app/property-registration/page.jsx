@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
-import styles from "./property-registration.module.css";
+import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import styles from "./property-registration.module.css";
 
 const UploadIcon = () => (
   <svg
@@ -21,8 +21,11 @@ const UploadIcon = () => (
   </svg>
 );
 
-export default function PropertyRegistrationPage() {
-  const [message, setMessage] = useState("");
+const PropertyRegistrationPage = () => {
+  // Estados para controle de feedback
+  const [status, setStatus] = useState({ type: "", msg: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [mobiliado, setMobiliado] = useState("");
   const [fotos, setFotos] = useState([]);
 
@@ -55,9 +58,11 @@ export default function PropertyRegistrationPage() {
     }));
   };
 
-  const handleFileChange = (e) => {
-    setFotos([...e.target.files]);
-  };
+  // const handleFileChange = (e) => {
+  //   if (e.target.files) {
+  //     setFotos([...Array.from(e.target.files)]);
+  //   }
+  // };
 
   const fetchAddressByCep = async (cep) => {
     if (!cep || cep.length < 8) return;
@@ -80,18 +85,24 @@ export default function PropertyRegistrationPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setStatus({ type: "", msg: "" });
+
     try {
       const idRandom = uuidv4();
       const bodyData = { ...formData, mobiliado };
-
-      const response = await fetch("http://localhost:3001/imoveis", {
+      const response = await fetch("http://localhost:3000/imoveis", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: idRandom, ...bodyData }),
       });
 
       if (response.ok) {
-        setMessage("✅ Imóvel cadastrado com sucesso!");
+        setStatus({
+          type: "success",
+          msg: "✅ Imóvel cadastrado com sucesso!",
+        });
+
         setFormData({
           tipoImovel: "",
           logradouro: "",
@@ -113,12 +124,18 @@ export default function PropertyRegistrationPage() {
           descricao: "",
         });
         setMobiliado("");
+        // setFotos([]);
       } else {
-        setMessage("❌ Erro ao cadastrar o imóvel.");
+        throw new Error("Erro na resposta do servidor");
       }
     } catch (error) {
       console.error("Erro:", error);
-      setMessage("⚠️ Erro de conexão com o servidor.");
+      setStatus({
+        type: "error",
+        msg: "⚠️ Ocorreu um erro ao cadastrar o imóvel. Tente novamente.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -145,7 +162,7 @@ export default function PropertyRegistrationPage() {
     });
     setFotos([]);
     setMobiliado("");
-    setMessage("");
+    setStatus({ type: "", msg: "" });
   };
 
   return (
@@ -453,7 +470,7 @@ export default function PropertyRegistrationPage() {
                 type="file"
                 multiple
                 className={styles.inputFileHidden}
-                onChange={handleFileChange}
+                // onChange={handleFileChange}
               />
             </label>
 
@@ -466,8 +483,12 @@ export default function PropertyRegistrationPage() {
                 Cancelar
               </button>
 
-              <button type="submit" className={styles.btnRegister}>
-                Cadastrar
+              <button
+                type="submit"
+                className={styles.btnRegister}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Cadastrando..." : "Cadastrar"}
               </button>
             </div>
           </div>
@@ -479,12 +500,21 @@ export default function PropertyRegistrationPage() {
                   key={index}
                   src={URL.createObjectURL(file)}
                   className={styles.previewImage}
+                  alt={`Preview ${index}`}
                 />
               ))}
           </div>
-          {message && <p className={styles.message}>{message}</p>}
+
+          {status.type === "success" && (
+            <div className={styles.messageSuccess}>{status.msg}</div>
+          )}
+          {status.type === "error" && (
+            <div className={styles.messageError}>{status.msg}</div>
+          )}
         </form>
       </div>
     </div>
   );
-}
+};
+
+export default PropertyRegistrationPage;

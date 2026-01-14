@@ -1,12 +1,13 @@
 .propertyRegistrationContainer {
   background-color: #f9f9f9;
   min-height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 .formContainer {
   width: 100%;
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 2rem;
   background-color: #ffffff;
 }
@@ -67,7 +68,6 @@
 .formGroup {
   display: flex;
   flex-direction: column;
-  font-family: Poppins;
 }
 
 .formGroup label {
@@ -88,7 +88,7 @@
   border-radius: 8px;
   box-sizing: border-box;
   color: black;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
 }
 
 .input:focus {
@@ -194,6 +194,7 @@
   cursor: pointer;
   background-color: #e0e0e0;
   color: #333;
+  border: none;
 }
 
 .btnRegister {
@@ -206,12 +207,18 @@
   background-color: #8d001a;
   color: #ffffff;
   border: none;
+  transition: background 0.3s;
+}
+
+.btnRegister:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 .btnCancel:hover {
   background-color: #d1d1d1;
 }
-.btnRegister:hover {
+.btnRegister:hover:not(:disabled) {
   background-color: #960e0e;
 }
 
@@ -230,20 +237,37 @@
   border: 2px solid #ccc;
 }
 
-.message {
-  margin-top: 1rem;
-  font-weight: 600;
-  color: #8d001a;
+/* Mensagens de Feedback */
+.messageSuccess {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  text-align: center;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.messageError {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  text-align: center;
+  width: 100%;
+  grid-column: 1 / -1;
 }
 
 .row3ColsAligned {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   gap: 1.5rem;
-}
-
-.row1Col {
-  grid-template-columns: 1fr;
 }
 
 @media (max-width: 1024px) {

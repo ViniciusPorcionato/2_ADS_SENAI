@@ -2,6 +2,7 @@ import Header from '@/components/Header/Header'
 import './globals.css'
 import { Poppins } from 'next/font/google'
 import Footer from '@/components/Footer/Footer'
+import WhatsAppButton from '@/components/WhatsAppButton/WhatsAppButton'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        <WhatsAppButton/>
       </body>
     </html>
   )
